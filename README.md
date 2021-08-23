@@ -20,3 +20,9 @@ This is the repository for the project of The Codarchs during Cohort 3 of the TI
 8. Commit the changes... git commit -m "commit message"
 9. Push your changes
 10. Make Pull Request (PR) to the develop branch of the main repo
+
+## Important things to note
+1. Ensure you fetch upstream on the repository before making Pull Request to ensure your repository is up to date
+2. Do not work on files that were not assigned to you... No lose focus!
+3. If there is an error or something worth correcting on someone else's work, let them know.
+4. If you are confused at any point, ask questions.
