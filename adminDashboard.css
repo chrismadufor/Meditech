@@ -46,6 +46,10 @@
       border-radius: 20px !important;
   }
 
+  .addCard.card{
+    background-color: rgb(233, 230, 230) !important;
+  }
+
   #mainBody div.side {
       background-color: rgb(199, 196, 216);
       border-radius: 30px;
