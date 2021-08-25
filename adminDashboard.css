@@ -1,0 +1,79 @@
+.container {
+    display: grid;
+    grid-template-columns: 1vw 80vw;
+}
+.sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(117, 119, 224);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+  }
+
+  #mainBody{
+    display: grid;
+    margin:20px;
+    background-color: slategrey !important;
+    grid-template-columns: 60vw 25vw;
+    column-gap: 40px;
+    justify-content: space-between;
+
+  }
+
+
+  .banner{
+      background-color: rgb(233, 224, 233);
+      border-radius: 30px;
+      width: 60%;
+      padding: 30px 20px;
+  }
+
+  .banner h3 span {
+      color:yellowgreen
+  }
+
+  #mainBody div.main{
+      background-color: rgb(221, 216, 216);
+      padding: 20px 55px;
+      border-radius: 30px;
+  }
+
+  .card{
+      border-radius: 20px !important;
+  }
+
+  #mainBody div.side {
+      background-color: rgb(199, 196, 216);
+      border-radius: 30px;
+      padding: 20px;
+  }
+
+  .sidenav a {
+    padding: 18px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:last-of-type{
+      margin-top: 10vh;
+  }
+  
+  .sidenav a img {
+      transition: all 0.5s ease-out;
+      max-width: 24px;
+  }
+  .sidenav a:hover img {
+    filter: invert(100);
+  }
+  
+  
+  @media screen and (max-height: 450px) {
+   
+  }
