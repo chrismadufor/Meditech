@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/patient-dashboard.css" />
+
+    <title>Patient Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-nav">
+        <div class="header">
+          <img src="img/logo.svg" alt="#" />
+          <h2>MEDITECH</h2>
+        </div>
+        <ul class="side-nav-links">
+          <li class="active">
+            <a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-list"></i> <span>Appointments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-bell"></i><span>Notifications</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          </li>
+          <li class="log-out">
+            <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top-nav">
+          <div class="page-name">
+            <i class="fas fa-bars"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="profile-details">
+            <!-- Use the search only if it is on your page -->
+            <!-- <div class="search-field">
+              <input type="text" placeholder="Search for something" />
+              <div class="search-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div> -->
+            <div class="notification-icons">
+              <div class="message-icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <div class="bell-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <img src="img/patient.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="main-content">
+          
+          <div class="patient-info">
+            <div class="patient">
+
+              <div class="patient-greet">
+              <p>Good Morning</p> <br>
+              <img src="img/sunrise (1).png" alt="">
+              </div>
+              
+
+              <div class="patient-name">
+                <img src="img/patient.jpg" alt="" />
+              <p>Abiola Odeyemi <span>Hospital ID:TKI545</span></p>
+              </div>
+
+            </div>
+
+            <div class="total-appointment">
+              <p>Total Appointments</p>
+              <div class="total">
+                <img src="img/Vector.png" alt="">
+                <p>12</p>
+              </div>
+              
+            </div>
+
+            <div class="new-appointments">
+              <p><a href="#"> New Appointment</a> </p>
+              <img src="img/plus sign.png" alt="">
+            </div>
+  
+          </div>
+          
+          
+          
+         <section class="all-appointments">
+
+            <div class="all-appointments-header">
+              <p class="bold">Doctor Assigned</p>
+              <p class="bold"> Date</p>
+              <p class="bold"> Time</p>
+              <p class="bold"> Status</p>
+
+            </div>
+            
+            <div class="appointments">
+                <p class="doctor-assigned-block">Dr. James Adeyemo</p>
+                <p class="appointments-date-block">25-08-21</p>
+                <p class="appointments-time-block">25-08-21</p>
+                <div  class="pending status">
+                 <p>Pending</p>
+                </div>
+            </div>
+
+            
+            <div class="appointments">
+              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
+              <p class="appointments-date-block">25-08-21</p>
+              <p class="appointments-time-block">25-08-21</p>
+              <div class="status">
+                <p class="cancelled">Cancelled</p>
+              </div>
+
+            </div>
+
+            <div class="appointments">
+              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
+              <p class="appointments-date-block">25-08-21</p>
+              <p class="appointments-time-block">25-08-21</p>
+              <div class="status">
+                <p class="approved">Approved</p>
+              </div>
+            </div>
+
+            <div class="appointments">
+              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
+              <p class="appointments-date-block">25-08-21</p>
+              <p class="appointments-time-block">25-08-21</p>
+              <div  class="pending status">
+               <p>Pending</p>
+              </div>
+          </div>
+
+         </section>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

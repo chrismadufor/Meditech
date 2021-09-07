@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  /* font-size: 16px; */
+}
+
+
+
+.main-content {
+  /* background-color: darkcyan; */
+  /* width: 100; */
+  height: 500px;
+  margin: 30px 0 0;
+  padding: 0 50px;
+}
+
+.patient-info{
+  display: flex;
+  border: 1px  ;
+  align-items: center;
+  margin-left: 10px;
+}
+.patient{
+  margin: 0 20px;
+  height: 150px;
+  width: 40%;
+  padding: 6px 10px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.patient img{
+  width: 70px;
+  height: 70px;
+  margin: 0 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-left: 20px;
+}
+.patient-name{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.patient-name span{
+  font-size: 15px;
+
+}
+.patient-greet{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.patient-greet img{
+  width: 50px;
+  height: 50px;
+}
+
+.total-appointment{
+  margin: 0 20px ;
+  text-align: center;
+  height: 150px;
+  width: 20%;
+  padding: 6px 10px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.total{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.total img{
+  height: 70px;
+  width: 70px;
+}
+.total p{
+  font-size: 50px;
+  font-weight: bold;
+}
+.new-appointments{
+  height: 30px;
+  width: 200px;
+  display: flex;
+  background-color: #00a8db;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.new-appointments img{
+  margin-left: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+
+.all-appointments {
+
+  background-color: rgba(238, 238, 238, 0.3);
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.all-appointments-header {
+ 
+  padding: 10px 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 0 30px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+.filter button {
+  background-color: #00a8db;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+}
+.filter button.active {
+  background-color: white;
+  color: #00a8db;
+  border: 1px solid #00a8db;
+}
+
+.appointments{
+  font-weight: bold;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 20px 20px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);          
+  border-radius: 5px;
+}
+
+
+.pending,.cancelled,.approved{
+  text-align: center;
+  border-radius:5px ;
+  color:rgb(218, 214, 214);
+}
+
+.pending{
+  padding: 5px 8px;
+  
+  background-color: rgb(245, 245, 10);
+  
+}
+.cancelled{
+  padding: 5px;
+  
+  background-color: red;
+  
+}
+.approved{
+  padding: 5px;
+  background-color: rgb(47, 245, 47);
+  
+}
