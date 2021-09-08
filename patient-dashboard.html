@@ -48,7 +48,7 @@
             <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
           </li>
           <li class="log-out">
-            <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+            <a href="patient-signin.html"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
           </li>
         </ul>
       </div>
@@ -112,69 +112,60 @@
   
           </div>
           
-          
-          
-         <section class="appointments-bg">
 
-            <div class="appointments-header">
-              <p class="bold">Doctor Assigned</p>
-              <p class="bold"> Date</p>
-              <p class="bold"> Time</p>
-              <p class="bold"> Status</p>
-
-            </div>
-            
-            <div class="appointments">
-              <div class="patients-image table-img">
-                <img src="img/patient.jpg" alt="" />
-              </div>
-                <p class="doctor-assigned-block">Dr. James Adeyemo</p>
-                <p class="appointments-date-block">25-08-21</p>
-                <p class="appointments-time-block">25-08-21</p>
-                <div  class="pending status">
-                 <p>Pending</p>
-                </div>
-            </div>
-
-            
-            <div class="appointments">
-              <div class="patients-image table-img">
-                <img src="img/profile-picture.jpg" alt="" />
-              </div>
-              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
-              <p class="appointments-date-block">25-08-21</p>
-              <p class="appointments-time-block">25-08-21</p>
-              <div class="status">
-                <p class="cancelled">Cancelled</p>
-              </div>
-
-            </div>
-
-            <div class="appointments">
-              <div class="patients-image table-img">
-                <img src="img/profile-picture.jpg" alt="" />
-              </div>
-              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
-              <p class="appointments-date-block">25-08-21</p>
-              <p class="appointments-time-block">25-08-21</p>
-              <div class="status">
-                <p class="approved">Approved</p>
-              </div>
-            </div>
-
-            <div class="appointments">
-              <div class="patients-image table-img">
-                <img src="img/patient.jpg" alt="" />
-              </div>
-              <p class="doctor-assigned-block">Dr. James Adeyemo</p>
-              <p class="appointments-date-block">25-08-21</p>
-              <p class="appointments-time-block">25-08-21</p>
-              <div  class="pending status">
-               <p>Pending</p>
-              </div>
+         <div class="appointmentDashboard">
+          <div class="all-app">
+            <p>Recent Appointments</p>
+            <i class="fas fa-ellipsis-v"></i>
           </div>
-
-         </section>
+          <table>
+            <thead>
+              <tr class="table-row">
+                <th></th>
+                <th>Doctors Assigned</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Contact</th>
+                <th><p>Status</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row">
+                <td><img src="img/patient.jpg" alt="" /></td>
+                <td>Dr. James Adeyemo</td>
+                <td>25-08-21</td>
+                <td>10:00am</td>
+                <td>0709943765</td>
+                <td><button class="completed">Completed</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/profile-picture.jpg" alt="" /></td>
+                <td>Dr. James Adeyemo</td>
+                <td>25-08-21</td>
+                <td>2:00am</td>
+                <td>08145457523</td>
+                <td><button class="completed">Completed</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/patient.jpg" alt="" /></td>
+                <td>Dr. James Adeyemo</td>
+                <td>25-08-21</td>
+                <td>9:00am</td>
+                <td>0709943765</td>
+                <td><button class="cancelled"> Cancelled</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/profile-picture.jpg" alt="" /></td>
+                <td>Dr. James Adeyemo</td>
+                <td>25-08-21</td>
+                <td>11:00am</td>
+                <td>08145457523</td>
+                <td ><button class="completed">Completed</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="view-all">View All</button>
+        </div>
 
         </div>
         </div>
