@@ -21,11 +21,11 @@ function loginAuth() {
   } else if (passwordSignin.value == "") {
     passwordErr.innerText = "Password cannot be empty";
   } else {
-    if (usernameSignin == "pt10001") {
+    if (usernameSignin.value == "pt10001") {
       window.location.assign("patient-dashboard.html");
-    } else if (usernameSignin == "dt10001") {
+    } else if (usernameSignin.value == "dt10001") {
       window.location.assign("Doctors-dashboard.html");
-    } else if (usernameSignin == "ad10001") {
+    } else if (usernameSignin.value == "ad10001") {
       window.location.assign("admin-dashboard.html");
     } else {
       loginErr.innerText = "Username and password does not match";
