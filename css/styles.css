@@ -2,15 +2,18 @@
     background-color: chocolate;
 }
 .greet{
-    display: grid;
-    grid-template-columns: 80% 20%;
-}
-.greet .inner{
-    display: inline;
-}
-.greet span img{
-    max-width: 5%;
-    height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+.greet img{
+  max-width: 35px;
+  margin-right: 1em;
 }
 div.cards{
     display: grid;
@@ -28,13 +31,15 @@ div.cards{
   }
   .tableTopRow{
       display: grid;
-      margin-left: 10px;
+      margin-left: 50px;
       grid-template-columns: 80% 10%;
+      justify-content: space-between;
+      margin-bottom: 25px;
   }
   .tableTopRow img{
-    height: 25px;
-    width: 5px;
-   margin-right: -30px;
+    margin-left: 30px;
+    max-width: 6px;
+    height: auto;
   }
   select#theDate{
     font-weight: bold;
@@ -48,7 +53,6 @@ div.cards{
     border-radius: 20px !important;
     border: 1px solid gray;
     background-color: #fff;
-    box-shadow: 2px 3px 5px #aaaaaa;
     height: 155px !important;
     padding: 10px;
     text-align: left
@@ -63,7 +67,7 @@ div.cards{
       padding-top: 20px;
   }
   div.tableTag{
-    background-color: #db441e;
+    background-color: #FF7A00;
     border-radius: 6px;
     color:#fff;
     text-align: center;
@@ -80,11 +84,14 @@ div.cards{
   .tableComponent{
       background-color: #fff;
       margin-top: 4%;
-      border-radius: 15px;
       padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
   }
   .tableComponent table{
-      width: 90%;
+      width: 100%;
+      padding-left: 10px;
       margin-top: 19px;
   }
   .tableComponent table img{
@@ -96,15 +103,33 @@ div.cards{
       background-color: tomato;
     padding-bottom: 50px;
   }
+
   .tableComponent table tr td{
-      padding-left: 20px;
+    margin-bottom: 17px;
+  }
+
+  .tableComponent table tr td{
+      padding-left: 40px;
       align-items: center;
  
   }
 
   .tableComponent table .firstCol{
      display: flex;
+     margin-top: 17px !important;
   }
   .tableComponent table .firstCol img{
       margin-right: 20px;
+  }
+
+  button.afterTable{
+    margin-left: 50px;
+    background-color: #00A8DB;
+    color: #fff;
+    padding: 7px;
+    width: 86px;
+    height: 34px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
   }
