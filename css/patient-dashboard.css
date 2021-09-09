@@ -78,8 +78,11 @@
   font-size: 50px;
   font-weight: bold;
 }
+.fa-hospital{
+  color: #00A8DB;
+}
 .new-appointments{
-  height: 30px;
+  height: 60px;
   width: 200px;
   display: flex;
   background-color: #00a8db;
