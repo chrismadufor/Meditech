@@ -7,7 +7,7 @@ function authenticateDetails() {
   if (uName.value === "" || emailAdd.value === "" || pWord.value === "") {
     let errorDisplay = document.getElementById("message");
     errorDisplay.innerHTML = `<p style="color: red;">
-        Please fill all iput fields</p>`;
+        Please fill all input fields</p>`;
   } else {
     userLogin = {};
     userLogin.userName = uName.value;
