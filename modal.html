@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css">
+</head>
+<body>
+    <div class="stay">
+        <p>Way to say!!</p>
+        <button id="btn" onclick="modal();">Modal test</button>
+        <button id="btn" onclick="signUpSuccess();">Signup test</button>
+    </div>
+    <div class="modal" id="modal">
+        <div class="log-out-wrap">
+            <p>Are you sure you want to log out?</p>
+            <div class="button-wrap">
+                <button class="warning" onclick="signOut();">Yes</button>
+                <button class="blue" onclick="modal();">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="sign-up-successful">
+        <div class="log-up-wrap">
+            <p>Registration Successful</p>
+            <i class="far fa-check-circle"></i>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+

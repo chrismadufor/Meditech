@@ -10,6 +10,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+button {
+  border-radius: 5px;
+  border: 0;
+}
 ul {
   list-style: none;
 }
@@ -272,72 +276,49 @@ img {
 .warning {
   background-color: rgb(230, 0, 0);
 }
-
-/* -------THIS IS THE PART YOU NEED!!!-------- */
-
-.all-appointments {
-  margin-top: 50px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(238, 238, 238, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-}
-.all-appointments-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
-.all-appointments-header p {
-  margin-right: 20px;
-}
-.filter {
-  margin-left: 20px;
-}
-.filter button {
+.blue {
   background-color: #00a8db;
-  color: white;
-  font-weight: bold;
-  width: 100px;
-  height: 35px;
-  border: none;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-.filter button.active {
-  background-color: white;
-  color: #00a8db;
-  border: 1px solid #00a8db;
-}
-.appointments-item {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  padding: 0 30px;
-  background-color: white;
-  border: 1px solid #eee;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-  margin: 10px 0;
-  border-radius: 5px;
-}
-.bold {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.wide {
-  width: 15%;
-}
-.table-img {
-  width: 5%;
-}
-.patients-image img,
-.doctors-image img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
-/* ----IT ENDS HERE!!!---- */
+/* -------MODAL-------- */
+#modal, #sign-up-successful {
+  display: none;
+}
+.modal {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+}
+.log-out-wrap {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.log-out-wrap button {
+  width: 100px;
+  height: 30px;
+  margin: 30px 10px;
+  color: white;
+  cursor: pointer;
+}
+.log-out-wrap p{
+  font-size: 20px;
+}
+.log-out-wrap i {
+  font-size: 70px;
+  color: rgb(0, 224, 0);
+  margin-top: 30px;
+}
