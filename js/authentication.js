@@ -1,3 +1,4 @@
+
 function authenticateDetails() {
   let uName = document.getElementById("username");
   let emailAdd = document.getElementById("email");
@@ -14,7 +15,8 @@ function authenticateDetails() {
     userLogin.email = emailAdd.value;
     userLogin.hospitalId = hId.value;
     userLogin.passWord = pWord.value;
-    console.log(userLogin);
+    userLogin.userType = "Patient"
+    userLogin.id = Math.random()
     userNameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     hospitalIdFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
@@ -38,7 +40,16 @@ function authenticateDetails() {
         Password must be a minimum of 8 Characters</p>`;
     } else {
       errorDisplay.innerHTML = "";
-      window.location.assign('patient-signin.html')
-    }
+      let userDataArray = JSON.parse(localStorage.getItem("userDB"));
+
+      if (userDataArray === null) {
+        userDataArray = [];
+        userDataArray.push(userLogin);
+      } else if(userDataArray !== null){
+        userDataArray.push(userLogin);
+      }
+      localStorage.setItem("userDB", JSON.stringify(userDataArray));
+      window.location.assign('patient-signin.html');
+     }
   }
 }
