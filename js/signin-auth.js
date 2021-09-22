@@ -26,7 +26,7 @@ function loginAuth() {
     userDb.forEach((personObj) => {
       if (
         usernameSignin.value == personObj.email &&
-        passwordSignin.value == personObj.password &&
+        passwordSignin.value == personObj.passWord &&
         personObj.userType == "Patient"
       ) {
         window.location.assign("patient-dashboard.html");
