@@ -1,0 +1,137 @@
+.container{
+    /* background-color: chocolate; */
+}
+.top-nav i.fa-cog, i.fa-bell{
+  color: #00A8DB;
+}
+.greet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+.greet img{
+  max-width: 35px;
+  margin-right: 1em;
+}
+div.cards{
+    display: grid;
+    margin-left: -10px;
+    grid-template-columns: 23% 23% 23% 23%;
+    margin-top: 30px;
+    grid-column-gap: 30px;
+  }
+
+  select.theDate{
+      width: 160px;
+      border-radius: 5px;
+      height: 32px;
+      background-color: transparent;
+  }
+  .tableTopRow{
+      display: grid;
+      margin-left: 50px;
+      grid-template-columns: 80% 10%;
+      justify-content: space-between;
+      margin-bottom: 25px;
+  }
+  .tableTopRow img{
+    margin-left: 30px;
+    max-width: 6px;
+    height: auto;
+  }
+  select#theDate{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.017em;
+    color: #252525;
+  }
+  
+  .card{
+    border-radius: 20px !important;
+    background-color: #fff;
+    height: 155px !important;
+    padding: 10px;
+    text-align: left
+  }
+  .cardBody{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    flex-direction: column;
+  }
+  .cardBody h1{
+      padding-top: 20px;
+  }
+  div.tableTag{
+    background-color: #FF7A00;
+    border-radius: 6px;
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    padding-top: 7px;
+    width: 120px;
+    height: 35px;
+  }
+  .card img {
+    max-width: 15%;
+    margin-right: 20px;
+  }
+  .tableComponent{
+      background-color: #fff;
+      margin-top: 4%;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+  }
+  .tableComponent table{
+      width: 100%;
+      padding-left: 10px;
+      margin-top: 19px;
+  }
+  .tableComponent table img{
+      width: 40px;
+      height: 40px;
+      display: inline;
+  }
+  .tableComponent table tr:first-of-type td:first-of-type{
+      background-color: tomato;
+    padding-bottom: 50px;
+  }
+
+  .tableComponent table tr td{
+    margin-bottom: 17px;
+  }
+
+  .tableComponent table tr td{
+      padding-left: 40px;
+      align-items: center;
+ 
+  }
+
+  .tableComponent table .firstCol{
+     display: flex;
+     margin-top: 17px !important;
+  }
+  .tableComponent table .firstCol img{
+      margin-right: 20px;
+  }
+
+  button.afterTable{
+    margin-left: 50px;
+    background-color: #00A8DB;
+    color: #fff;
+    padding: 7px;
+    width: 86px;
+    height: 34px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
