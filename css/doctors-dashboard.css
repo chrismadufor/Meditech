@@ -54,7 +54,6 @@ div.cards{
   
   .card{
     border-radius: 20px !important;
-    border: 1px solid gray;
     background-color: #fff;
     height: 155px !important;
     padding: 10px;

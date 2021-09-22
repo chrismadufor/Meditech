@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+}
+
+/* body */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d5e8fa;
+  z-index: -20;
+}
+/* body */
+
+/* Card Background */
+
+.background {
+  display: flex;
+  height: 80vh;
+  width: 54%;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 42px -20px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 42px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 42px -20px rgba(0, 0, 0, 0.75);
+}
+
+/* Card Background */
+
+/* The left part one the card with the logo and input */
+
+.left {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.card {
+  width: 70%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.remfor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* The left part one the card with the logo and input */
+
+/* The right part one the card with a background iamge */
+
+.right {
+  height: inherit;
+  width: 50%;
+  background-color: #d5e8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.background-image {
+  height: 40vh;
+  width: 100%;
+}
+
+.background-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* The right part one the card with a background iamge */
+
+/* the content of the right card*/
+
+.card h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p > a {
+  text-decoration: none;
+}
+
+.card input {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  border-bottom: 1px black solid;
+  margin-bottom: 0.4rem;
+  outline: none;
+}
+
+/* ---------------------------sign up page--------------------------- */
+
+.arrow {
+  font-size: 15rem;
+  margin-top: 2rem;
+  color: #00a8db;
+}
+/* ---------------------------sign up page--------------------------- */
+
+.remfor {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.remfor a {
+  text-decoration: none;
+}
+
+.card a > button {
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  background-color: #00a8db;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+#remember-me {
+  position: relative;
+  top: 0.15rem;
+}
+
+.yesorno {
+  height: 1.8rem;
+  width: 80%;
+  background-color: #00e3d5;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.yes {
+  position: absolute;
+  height: inherit;
+  width: 50%;
+  background-color: #00a8db;
+  border-radius: 0.5rem;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* -------------------------the signup NO page --------------------------- */
+
+.no1 {
+  position: absolute;
+  height: inherit;
+  width: 50%;
+  background-color: #00a8db;
+  border-radius: 0.5rem;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.no1 p {
+  color: #fff;
+  font-weight: 500;
+}
+
+.yes1 {
+  position: absolute;
+  height: inherit;
+  width: 50%;
+  border-radius: 0.5rem;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.yes1 p {
+  color: #000;
+  font-weight: 500;
+}
+
+/* -------------------------the signup NO page --------------------------- */
+
+#yes {
+  background-color: inherit;
+  transition: all 1s ease;
+}
+
+#yes:hover {
+  background-color: #00a8db;
+}
+
+#yes p {
+  color: #000;
+}
+
+.yes p {
+  color: #fff;
+  font-weight: 500;
+}
+
+.no {
+  position: absolute;
+  height: inherit;
+  width: 50%;
+  border-radius: 0.5rem;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  z-index: 5;
+  transition: all 1s ease;
+}
+
+#no:hover {
+  background-color: #00a8db;
+}
+
+.no p {
+  color: #000;
+  font-weight: 500;
+}
+
+/* the content of the right card*/
+
+/* landing page */
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url(../images/background2.png) no-repeat center / cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(241, 235, 235);
+}
+
+.main h1 {
+  font-size: 6.5rem;
+  font-family: "raleway";
+  line-height: 1.5;
+  animation: animate1 2s forwards ease;
+}
+
+.main p {
+  font-size: 2.6rem;
+  font-family: "montserrat";
+  animation: animate1 2s forwards ease;
+}
+
+.btn {
+  margin: 4rem 0;
+  animation: animate1 2s forwards ease;
+}
+
+.btn button {
+  padding: 1.2rem 2.5rem;
+  font-size: 2.1rem;
+  font-weight: 500;
+  font-family: "montserrat";
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  background-color: #00a8db;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.btn button:hover {
+  background-color: rgb(241, 235, 235);
+  color: #00a8db;
+}
+
+.buttom p {
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "montserrat";
+  margin-top: 10rem;
+}
+
+.buttom p > a {
+  color: rgb(241, 235, 235);
+  animation: animate1 2s forwards ease;
+}
+
+@keyframes animate1 {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}

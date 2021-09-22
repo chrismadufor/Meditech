@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" />
+  </head>
+  <body>
+      <section class="hero">
+        <div class="background">
+          <div class="left">
+            <div class="card">
+              <h1>Sign Up Free</h1>
+              <p>Registered with the Hospital?</p>
+              <div class="yesorno">
+                <a class="yes1" href="./signup-yes-page.html"><p>Yes</p></a>
+                <a class="no1" href="#"><p>No</p></a>
+              </div>
+              <p id="message"></p>
+              <form action="">
+                <input type="text" name="#" id="username" placeholder="Name" />
+                <input type="email" name="#" id="email" placeholder="Email" />
+                <input type="password" name="#" id="password" placeholder="Password" />
+                <a href="#" onclick="authenticateDetails()"><button type="button">SIGN UP</button></a>
+              </form>
+            </div>
+          </div>
+  
+          <div class="right">
+            <div class="background-image">
+              <img src="./img/background1.png" alt="background" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="/js/authentication.js"></script>
+  </body>
+</html>

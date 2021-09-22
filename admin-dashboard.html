@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/admin-dashboard.css" />
+
+    <title>Welcome, Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-nav">
+        <div class="header">
+          <img src="img/logo.svg" alt="#" />
+          <h2>MEDITECH</h2>
+        </div>
+        <ul class="side-nav-links">
+          <li class="active">
+            <a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-list"></i> <span>Appointments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-users"></i><span>Manage Doctors</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-users"></i><span>Manage Patients</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-bell"></i><span>Notifications</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          </li>
+          <li class="log-out">
+            <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top-nav">
+          <div class="page-name">
+            <i class="fas fa-bars"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="profile-details">
+            <!-- Use the search only if it is on your page -->
+            <div class="search-field">
+              <input type="text" placeholder="Search for something" />
+              <div class="search-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="notification-icons">
+              <div class="message-icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <div class="bell-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <img src="img/profile-picture.jpg" alt="" />
+          </div>
+        </div>
+        <div class="main-content">
+          <!-- ALL YOUR WORK GOES HERE -->
+          <div class="welcomeFilter">
+            <div class="greeting">
+              <img src="img/sunrise.png" alt="" />
+              <h3>Good Morning, Admin</h3>
+            </div>
+            <div class="filter">
+              <select>
+                <option value="Today">Today</option>
+                <option value="Yesterday">Yesterday</option>
+                <option value="Last Week">Last Week</option>
+              </select>
+            </div>
+          </div>
+          <div class="dashboardCards">
+            <div class="dashCard">
+              <p>All Patients</p>
+              <h1>206</h1>
+            </div>
+            <div class="dashCard">
+              <p>All Doctors</p>
+              <h1>52</h1>
+            </div>
+            <div class="dashCard">
+              <p>All Appointments</p>
+              <h1>625</h1>
+            </div>
+            <div class="dashCard">
+              <p>Pending Accounts</p>
+              <h1>10</h1>
+            </div>
+          </div>
+          <div class="appointDashboard">
+            <div class="filterDot">
+              <select>
+                <option value="Today">Completed</option>
+                <option value="Yesterday">Cancelled</option>
+                <option value="Last Week">Pending</option>
+              </select>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Patient</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Contact</th>
+                  <th><p>Completed</p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img src="img/profile-picture.jpg" alt="" /></td>
+                  <td>Joshua Ola</td>
+                  <td>18-01-2021</td>
+                  <td>8:00am</td>
+                  <td>08145457523</td>
+                  <td><button>Completed</button></td>
+                </tr>
+                <tr>
+                  <td><img src="img/profile-picture.jpg" alt="" /></td>
+                  <td>Joshua Ola</td>
+                  <td>18-01-2021</td>
+                  <td>8:00am</td>
+                  <td>08145457523</td>
+                  <td><button>Completed</button></td>
+                </tr>
+                <tr>
+                  <td><img src="img/profile-picture.jpg" alt="" /></td>
+                  <td>Joshua Ola</td>
+                  <td>18-01-2021</td>
+                  <td>8:00am</td>
+                  <td>08145457523</td>
+                  <td><button>Completed</button></td>
+                </tr>
+                <tr>
+                  <td><img src="img/profile-picture.jpg" alt="" /></td>
+                  <td>Joshua Ola</td>
+                  <td>18-01-2021</td>
+                  <td>8:00am</td>
+                  <td>08145457523</td>
+                  <td><button>Completed</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="dashViewBtn">View All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

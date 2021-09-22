@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/patient-dashboard.css" />
+
+    <title>Patient Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-nav">
+        <div class="header">
+          <img src="img/logo.svg" alt="#" />
+          <h2>MEDITECH</h2>
+        </div>
+        <ul class="side-nav-links">
+          <li class="active">
+            <a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-list"></i> <span>Appointments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-bell"></i><span>Notifications</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          </li>
+          <li class="log-out">
+            <a href="patient-signin.html"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top-nav">
+          <div class="page-name">
+            <i class="fas fa-bars"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="profile-details">
+            <!-- Use the search only if it is on your page -->
+            <!-- <div class="search-field">
+              <input type="text" placeholder="Search for something" />
+              <div class="search-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div> -->
+            <div class="notification-icons">
+              <div class="message-icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <div class="bell-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <img src="img/patient.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="main-content">
+          
+          <div class="patient-info">
+            <div class="patient">
+
+              <div class="patient-greet">
+              <p>Good Morning</p> <br>
+              <img src="img/sunrise (1).png" alt="">
+              </div>
+              
+
+              <div class="patient-name">
+                <img src="img/patient.jpg" alt="" />
+              <p class="pat-name">Abiola Odeyemi </p>
+              <p class="hosed">Hospital ID: <span class="hos-num">TKI545</span></p>
+              </div>
+
+            </div>
+
+            <div class="total-appointment">
+              <p>Total Appointments</p>
+              <div class="total">
+                <i class="fas fa-hospital fa-5x "></i>
+                <p>12</p>
+              </div>
+              
+            </div>
+
+            <div class="new-appointments">
+              <p><a href="#"> New Appointment</a> </p>
+              <img src="img/plus sign.png" alt="">
+            </div>
+  
+          </div>
+          
+
+         <div class="appointmentDashboard">
+          <div class="all-app">
+            <p>Recent Appointments</p>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <table>
+            <thead>
+              <tr class="table-row">
+                <th></th>
+                <th>Doctors Assigned</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Contact</th>
+                <th><p>Status</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row">
+                <td><img src="img/patient.jpg" alt="" /></td>
+                <td>Dr. James Adeyemo</td>
+                <td>25-08-21</td>
+                <td>10:00am</td>
+                <td>0709943765</td>
+                <td><button class="completed">Completed</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/profile-picture.jpg" alt="" /></td>
+                <td>Dr. Peter Kadir</td>
+                <td>25-08-21</td>
+                <td>2:00am</td>
+                <td>08145457523</td>
+                <td><button class="completed">Completed</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/patient.jpg" alt="" /></td>
+                <td>Dr. James Ruth</td>
+                <td>25-08-21</td>
+                <td>9:00am</td>
+                <td>0709943765</td>
+                <td><button class="cancelled"> Cancelled</button></td>
+              </tr>
+              <tr class="table-row">
+                <td><img src="img/profile-picture.jpg" alt="" /></td>
+                <td>Dr. Emmanuel Faruk</td>
+                <td>25-08-21</td>
+                <td>11:00am</td>
+                <td>08145457523</td>
+                <td ><button class="completed">Completed</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="view-all">View All</button>
+        </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/patient-dashboard.js"></script>
+  </body>
+</html>
