@@ -16,19 +16,29 @@ function loginAuth() {
   console.log(usernameSignin.value);
   console.log(passwordSignin.value);
 
+  let userDb = JSON.parse(localStorage.getItem("userDB"));
+
   if (usernameSignin.value == "") {
     usernameErr.innerText = "Username cannot be empty";
   } else if (passwordSignin.value == "") {
     passwordErr.innerText = "Password cannot be empty";
   } else {
-    if (usernameSignin.value == "pt10001") {
-      window.location.assign("patient-dashboard.html");
-    } else if (usernameSignin.value == "dt10001") {
-      window.location.assign("Doctors-dashboard.html");
-    } else if (usernameSignin.value == "ad10001") {
-      window.location.assign("admin-dashboard.html");
-    } else {
-      loginErr.innerText = "Username and password does not match";
-    }
+    userDb.forEach((personObj) => {
+      if (
+        usernameSignin.value == personObj.email &&
+        passwordSignin.value == personObj.password &&
+        personObj.userType == "Patient"
+      ) {
+        window.location.assign("patient-dashboard.html");
+        localStorage.setItem("presentUser", personObj.id);
+      } else if (usernameSignin.value == "dt10001") {
+        window.location.assign("Doctors-dashboard.html");
+        // localStorage.setItem("presentUser", personObj.id);0
+      } else if (usernameSignin.value == "ad10001") {
+        window.location.assign("admin-dashboard.html");
+      } else {
+        loginErr.innerText = "Username and password does not match";
+      }
+    });
   }
 }
