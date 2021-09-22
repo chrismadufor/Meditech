@@ -9,7 +9,7 @@ function retrieveData() {
       if (personData.hospitalId == null || personData.hospitalId == "") {
         DashPatientHospitalId.innerText = "Contact Hospital for ID";
       } else {
-        DashPatientHospitalId.innerText = personData.hospitalId;
+        DashPatientHospitalId.innerText = (personData.hospitalId).toUpperCase();
       }
     }
   });
