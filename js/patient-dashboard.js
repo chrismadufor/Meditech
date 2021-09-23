@@ -11,6 +11,11 @@ function retrieveData() {
   userDb.forEach((personData) => {
     if (presentUserId == personData.id) {
       DashPatientName.innerText = personData.userName;
+      if (personData.profilePhoto == "") {
+        dashImg.src = "img/9.png";
+      } else {
+        dashImg.src = "data:image/jpeg;base64," + personData.profilePhoto;
+      }
 
       if (personData.hospitalId == null || personData.hospitalId == "") {
         DashPatientHospitalId.innerText = "Contact Hospital for ID";
