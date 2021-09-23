@@ -65,6 +65,15 @@ editprofileImage.onchange = function (e) {
     console.log(base64String);
 
     editprofileShow.src = "data:image/jpeg;base64," + base64String;
+    userDb.forEach((personData, index, array) => {
+      if (presentUserId == personData.id) {
+        personData.profilePhoto = "data:image/jpeg;base64," + base64String;
+
+        localStorage.setItem("userDB", JSON.stringify(array));
+
+        profilePageFill();
+      }
+    });
 
     // editprofileImage.value = "";
   };
