@@ -95,8 +95,11 @@ function editProfModal() {
       editprofileAdd.value = personData.address;
       if (personData.profilePhoto == "") {
         editprofileImage.src = "img/9.png";
+        editprofileShow.src = "img/9.png";
       } else {
         editprofileImage.src =
+          "data:image/jpeg;base64," + personData.profilePhoto;
+        editprofileShow.src =
           "data:image/jpeg;base64," + personData.profilePhoto;
       }
     }
