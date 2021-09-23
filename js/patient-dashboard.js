@@ -27,6 +27,8 @@ var editprofileShow = document.querySelector(".edit-profile-img");
 var submitEdit = document.querySelector("#submit-form");
 
 function retrieveData() {
+  let userDb = JSON.parse(localStorage.getItem("userDB"));
+  let presentUserId = localStorage.getItem("presentUser");
   var DashPatientName = document.querySelector(".pat-name");
   var DashPatientHospitalId = document.querySelector(".hos-num");
   var dashImg = document.querySelector(".patient-img");
@@ -47,6 +49,8 @@ function retrieveData() {
 retrieveData();
 
 function profilePageFill() {
+  let userDb = JSON.parse(localStorage.getItem("userDB"));
+  let presentUserId = localStorage.getItem("presentUser");
   userDb.forEach((personData) => {
     if (presentUserId == personData.id) {
       profileName.innerText = personData.userName;
@@ -89,6 +93,8 @@ editprofileImage.onchange = function (e) {
 editProfileBtn.addEventListener("click", editProfModal);
 
 function editProfModal() {
+  let userDb = JSON.parse(localStorage.getItem("userDB"));
+  let presentUserId = localStorage.getItem("presentUser");
   userDb.forEach((personData) => {
     if (presentUserId == personData.id) {
       editprofileName.value = personData.userName;
@@ -106,6 +112,8 @@ function editProfModal() {
 }
 
 function saveEdit() {
+  let userDb = JSON.parse(localStorage.getItem("userDB"));
+  let presentUserId = localStorage.getItem("presentUser");
   userDb.forEach((personData) => {
     if (presentUserId == personData.id) {
       personData.userName = editprofileName.value;
