@@ -95,7 +95,7 @@ function editProfModal() {
 }
 
 function saveEdit() {
-  userDb.forEach((personData) => {
+  userDb.forEach((personData, index, array) => {
     if (presentUserId == personData.id) {
       personData.userName = editprofileName.value;
       personData.hospitalId = editprofileHosID.value;
@@ -106,6 +106,8 @@ function saveEdit() {
       personData.nationality = editprofileNation.value;
       personData.address = editprofileAdd.value;
       personData.profilePhoto = editprofileShow.src;
+
+      console.log(personData);
 
       localStorage.setItem("userDB", JSON.stringify(array));
 
