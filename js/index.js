@@ -1,8 +1,14 @@
 function modal() {
     let modal = document.getElementById('modal');
-    if (modal.style.display === 'none') {
-        modal.style.display = 'block'
-    } else modal.style.display = 'none'
+    if (modal.style.display === 'block') {
+        modal.style.display = 'none'
+    } else modal.style.display = 'block'
+}
+function editProfile() {
+    let editProfileModal = document.getElementById('edit-profile-modal');
+    if (editProfileModal.style.display === 'block') {
+        editProfileModal.style.display = 'none'
+    } else editProfileModal.style.display = 'block'
 }
 
 function signUpSuccess() {
@@ -22,11 +28,15 @@ function signOut() {
 
 window.onclick = function(event) {
     let closeModal = document.getElementById('modal');
-    let signUp = document.getElementById('sign-up-successful');
+    let signUp = document.getElementById
+    let editProfileModal = document.getElementById('edit-profile-modal');('sign-up-successful');
     if (event.target == closeModal) {
         modal()
     }
     if (event.target == signUp) {
         signUpSuccess()
+    }
+    if (event.target == editProfileModal) {
+        editProfile()
     }
 }
