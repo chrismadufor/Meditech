@@ -114,7 +114,6 @@ function saveEdit() {
       personData.city = editprofileCity.value;
       personData.nationality = editprofileNation.value;
       personData.address = editprofileAdd.value;
-      personData.profilePhoto = editprofileShow.src;
 
       console.log(personData);
 
