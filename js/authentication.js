@@ -49,7 +49,17 @@ function authenticateDetails() {
         userDataArray.push(userLogin);
       }
       localStorage.setItem("userDB", JSON.stringify(userDataArray));
-      window.location.assign('patient-signin.html');
+      signUpSuccess()
      }
   }
+}
+function signUpSuccess() {
+  let signUp = document.getElementById('sign-up-successful');
+  if (signUp.style.display === 'none') {
+      signUp.style.display = 'block'
+      setTimeout(() => {
+          signUp.style.display = 'none'
+          window.location.assign('patient-signin.html');
+      }, 4000)
+  } else signUp.style.display = 'none'
 }
