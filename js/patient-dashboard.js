@@ -46,9 +46,9 @@ function retrieveData() {
     }
   });
 }
-
+if(window.location.assign == "patient-dashboard.html"){
 retrieveData();
-
+}
 function profilePageFill() {
   let userDb = JSON.parse(localStorage.getItem("userDB"));
   let presentUserId = localStorage.getItem("presentUser");
