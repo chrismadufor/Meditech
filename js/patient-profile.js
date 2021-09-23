@@ -1,5 +1,6 @@
 let userDb = JSON.parse(localStorage.getItem("userDB"));
 let presentUserId = localStorage.getItem("presentUser");
+console.log(userDb);
 
 var editProfileBtn = document.querySelector(".edit-profile");
 
