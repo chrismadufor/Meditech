@@ -16,7 +16,13 @@ function authenticateDetails() {
     userLogin.hospitalId = hId.value;
     userLogin.passWord = pWord.value;
     userLogin.userType = "Patient"
-    userLogin.id = Math.random()
+    userLogin.dateOfBirth = "";
+    userLogin.phoneNumber = "";
+    userLogin.nationality = "";
+    userLogin.city = "";
+    userLogin.address = "";
+    userLogin.profilePhoto = "";
+    userLogin.id = Math.random();
     userNameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     hospitalIdFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
