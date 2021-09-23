@@ -16,7 +16,13 @@ function authenticateDetails() {
     userLogin.hospitalId = hId.value;
     userLogin.passWord = pWord.value;
     userLogin.userType = "Patient"
-    userLogin.id = Math.random()
+    userLogin.dateOfBirth = "";
+    userLogin.phoneNumber = "";
+    userLogin.nationality = "";
+    userLogin.city = "";
+    userLogin.address = "";
+    userLogin.profilePhoto = "";
+    userLogin.id = Math.random();
     userNameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     hospitalIdFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
@@ -49,7 +55,17 @@ function authenticateDetails() {
         userDataArray.push(userLogin);
       }
       localStorage.setItem("userDB", JSON.stringify(userDataArray));
-      window.location.assign('patient-signin.html');
+      signUpSuccess()
      }
   }
+}
+function signUpSuccess() {
+  let signUp = document.getElementById('sign-up-successful');
+  if (signUp.style.display === 'none') {
+      signUp.style.display = 'block'
+      setTimeout(() => {
+          signUp.style.display = 'none'
+          window.location.assign('patient-signin.html');
+      }, 4000)
+  } else signUp.style.display = 'none'
 }
