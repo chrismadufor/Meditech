@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/patient-profile.css" />
+    <title>Dashboard Template</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-nav">
+        <div class="header">
+          <img src="img/logo.svg" alt="#" />
+          <h2>MEDITECH</h2>
+        </div>
+        <ul class="side-nav-links">
+          <li>
+            <a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-list"></i> <span>Appointments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-bell"></i><span>Notifications</span></a
+            >
+          </li>
+          <li class="active">
+            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          </li>
+          <li class="log-out" onclick="modal();">
+            <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top-nav">
+          <div class="page-name">
+            <i class="fas fa-bars"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="profile-details">
+            <!-- Use the search only if it is on your page -->
+            <!-- <div class="search-field">
+              <input type="text" placeholder="Search for something" />
+              <div class="search-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div> -->
+            <button class="edit-profile" onclick="editProfile();">
+              <i class="fas fa-pencil"></i>Edit Profile
+            </button>
+            <div class="notification-icons">
+              <div class="message-icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <div class="bell-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <img src="img/profile-picture.jpg" alt=""/>
+          </div>
+        </div>
+        <div class="main-content">
+          <!-- ALL YOUR WORK GOES HERE -->
+          <div class="main-content-wrap">
+            <div class="profile-picture">
+              <img class="profile-img" src="img/profile-picture.jpg" alt="" />
+            </div>
+            <div class="profile-wrap">
+              <h2>Basic Information</h2>
+              <div class="basic-info flex">
+                <div>
+                  <div class="info-item">
+                    <p class="info-item-title patient-name">Full Name</p>
+                    <p class="profileName">Abiola Odeyemi</p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-item-title patient-id">Hospital ID</p>
+                    <p class="profileHosID">HPT10001</p>
+                  </div>
+                </div>
+                <div class="wide">
+                  <div class="info-item">
+                    <p class="info-item-title patient-email">Email</p>
+                    <p class="profileEmail">abbyodeyemi@gmail.com</p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-item-title patient-phone">Phone Number</p>
+                    <p class="profilePhone">08143753983</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <h2>Other Information</h2>
+              <div class="other-info flex">
+                <div>
+                  <div class="info-item">
+                    <p class="info-item-title">Date of birth</p>
+                    <p class="profileDOB">20-10-1991</p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-item-title">City</p>
+                    <p class="profileCity">Abuja</p>
+                  </div>
+                </div>
+                <div class="wide">
+                  <div class="info-item">
+                    <p class="info-item-title">Nationality</p>
+                    <p class="profileNation">Nigerian</p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-item-title">Address</p>
+                    <p class="profileAdd">
+                      No 25, Kadir Salmi Street, Maitama, Abuja
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="edit-profile-modal">
+      <form class="edit-profile-container">
+        <div class="form-title">
+          <h2>Edit Profile</h2>
+          <h2 class="close-modal" onclick="editProfile();">x</h2>
+        </div>
+        <div class="img-wrap">
+          <div class="img-preview">
+            <img class="edit-profile-img" src="img/profile-picture.jpg" alt="" />
+          </div>
+          <input type="file" name="profile-image" id="patient-image" />
+        </div>
+        <div class="input-wrap">
+          <div class="form-input">
+            <label for="patient-name">Name</label>
+            <input
+              type="text"
+              id="patient-name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-email">Email</label>
+            <input
+              type="text"
+              id="patient-email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-id">Hospital ID</label>
+            <input type="text" id="patient-id" />
+          </div>
+          <div class="form-input">
+            <label for="patient-phone">Phone Number</label>
+            <input
+              type="text"
+              id="patient-phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-dob">Date of birth</label>
+            <input
+              type="text"
+              id="patient-dob"
+              placeholder="Enter your date of birth"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-nationality">Nationality</label>
+            <input
+              type="text"
+              id="patient-nationality"
+              placeholder="Enter your nationality"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-city">City</label>
+            <input
+              type="text"
+              id="patient-city"
+              placeholder="Enter your city"
+            />
+          </div>
+          <div class="form-input">
+            <label for="patient-address">Address</label>
+            <input
+              type="text"
+              id="patient-address"
+              placeholder="Enter your address"
+            />
+          </div>
+        </div>
+        <input
+          type="submit"
+          value="UPDATE PROFILE"
+          class="submit-form"
+          id="submit-form"
+          onclick="editProfile();"
+        />
+      </form>
+    </div>
+    <div class="modal" id="modal">
+      <div class="log-out-wrap">
+        <p>Are you sure you want to log out?</p>
+        <div class="button-wrap">
+          <button class="warning" onclick="signOut();">Yes</button>
+          <button class="blue" onclick="modal();">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/patient-dashboard.js"></script>
+  </body>
+</html>
