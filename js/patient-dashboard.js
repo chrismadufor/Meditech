@@ -2,6 +2,7 @@ let userDb = JSON.parse(localStorage.getItem("userDB"));
 let presentUserId = localStorage.getItem("presentUser");
 
 var editProfileBtn = document.querySelector(".edit-profile");
+var profileSideBtn = document.querySelector(".profileSideBtn");
 
 var profileName = document.querySelector(".profileName");
 var profileHosID = document.querySelector(".profileHosID");
@@ -66,7 +67,7 @@ function profilePageFill() {
   });
 }
 
-profilePageFill();
+profileSideBtn.addEventListener("click", profilePageFill);
 
 // listen for the change event so we can capture the file
 
