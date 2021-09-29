@@ -1,0 +1,85 @@
+.container{
+    /* background-color: chocolate; */
+}
+.top-nav i.fa-cog, i.fa-bell{
+  color: #00A8DB;
+}
+.greet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  select.theDate{
+      width: 160px;
+      border-radius: 5px;
+      height: 32px;
+      background-color: transparent;
+  }
+  select#theDate{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.017em;
+    color: #252525;
+  }
+
+  div.tableTag{
+    background-color: #FF7A00;
+    border-radius: 6px;
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    padding-top: 7px;
+    width: 120px;
+    height: 35px;
+  }
+
+  .tableComponent{
+      background-color: #fff;
+      margin-top: 4%;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+  }
+  .tableComponent table{
+      width: 100%;
+      padding-left: 10px;
+      margin-top: 19px;
+  }
+  .tableComponent table img{
+      width: 40px;
+      height: 40px;
+      display: inline;
+  }
+  .tableComponent table tr:first-of-type td:first-of-type{
+      background-color: tomato;
+    padding-bottom: 50px;
+  }
+
+  .tableComponent table tr td{
+    margin-bottom: 17px;
+  }
+
+  .tableComponent table tr td{
+      padding-left: 40px;
+      align-items: center;
+ 
+  }
+
+  .tableComponent table .firstCol{
+     display: flex;
+     margin-top: 17px !important;
+  }
+  .tableComponent table .firstCol img{
+      margin-right: 20px;
+  }
+
+
