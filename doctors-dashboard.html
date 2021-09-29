@@ -46,7 +46,7 @@
           <li>
             <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
           </li>
-          <li class="log-out">
+          <li class="log-out" onclick=" modal();">
             <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
           </li>
         </ul>
@@ -206,5 +206,15 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="modal">
+      <div class="log-out-wrap">
+        <p>Are you sure you want to log out?</p>
+        <div class="button-wrap">
+          <button class="warning" onclick="signOut();">Yes</button>
+          <button class="blue" onclick="modal();">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>

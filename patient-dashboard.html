@@ -42,13 +42,13 @@
             >
           </li>
           <li>
-            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+            <a href="patient-profile.html"><i class="fas fa-user"></i> <span>Profile</span></a>
           </li>
           <li>
             <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
           </li>
-          <li class="log-out">
-            <a href="patient-signin.html"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          <li class="log-out" onclick="modal();">
+           <i class="fas fa-sign-out"></i> <span>Logout</span>
           </li>
         </ul>
       </div>
@@ -90,9 +90,13 @@
               
 
               <div class="patient-name">
-                <img src="img/patient.jpg" alt="" />
-              <p class="pat-name">Abiola Odeyemi </p>
+                <img src="img/patient.jpg" alt="" class="patient-img" />
+
+              <div class="patient-details">
+                <p class="pat-name">Abiola Odeyemi </p>
               <p class="hosed">Hospital ID: <span class="hos-num">TKI545</span></p>
+              </div>
+              
               </div>
 
             </div>
@@ -100,7 +104,7 @@
             <div class="total-appointment">
               <p>Total Appointments</p>
               <div class="total">
-                <i class="fas fa-hospital fa-5x "></i>
+                <i class="fas fa-hospital fa-4x "></i>
                 <p>12</p>
               </div>
               
@@ -172,6 +176,16 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="modal">
+      <div class="log-out-wrap">
+          <p>Are you sure you want to log out?</p>
+          <div class="button-wrap">
+              <button class="warning" onclick="signOut();">Yes</button>
+              <button class="blue" onclick="modal();">No</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/index.js"></script>
     <script src="js/patient-dashboard.js"></script>
   </body>
 </html>
