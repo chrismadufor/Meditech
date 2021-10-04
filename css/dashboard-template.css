@@ -281,7 +281,7 @@ img {
 }
 
 /* -------MODAL-------- */
-#modal, #sign-up-successful, #edit-profile-modal {
+#modal, #sign-up-successful, #edit-profile-modal, #book-appointment-successful, #add-doctor-successful  {
   display: none;
 }
 .modal {
