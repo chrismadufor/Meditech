@@ -1,0 +1,28 @@
+thead {
+  background-color: #00DED6;
+  color: #fff;
+  height: 50px;
+}
+
+table {
+  margin-top: 70px;
+  padding: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+
+}
+.table-notification{
+  border-bottom: 1px solid rgb(126, 126, 126);
+
+}
+td {
+  padding: 10px;
+}
+
+td i {
+  padding-left: 30px;
+  color: #00a8db;
+}
+
