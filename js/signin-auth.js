@@ -31,11 +31,13 @@ function loginAuth() {
       ) {
         window.location.assign("patient-dashboard.html");
         localStorage.setItem("presentUser", personObj.id);
-      } else if (usernameSignin.value == personObj.email &&
+      } else if (
+        usernameSignin.value == personObj.email &&
         passwordSignin.value == personObj.passWord &&
-        personObj.userType == "Doctor") {
+        personObj.userType == "Doctor"
+      ) {
         window.location.assign("Doctors-dashboard.html");
-        // localStorage.setItem("presentUser", personObj.id);0
+        localStorage.setItem("presentUser", personObj.id);
       } else if (usernameSignin.value == "ad10001") {
         window.location.assign("admin-dashboard.html");
       } else {
