@@ -88,6 +88,7 @@
          
           <form action="#">
             <h1>Add New Doctor</h1>
+            <p id="response"></p>
             <div class="form-input">
                 <label for="doctor-name">Name</label>
                 <input
@@ -112,7 +113,7 @@
                 <label for="doctor-dept">Department</label>
                 <input type="text" id="doctor-dept" placeholder="Enter department"/>
               </div>
-              <input type="submit" value="ADD DOCTOR" class="submit-form" onclick="addDoctorSuccess();">
+              <input type="submit" value="ADD DOCTOR" class="submit-form" onclick="addDoctor();">
           </form>
         </div>
       </div>
@@ -134,5 +135,6 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="/js/add-doctor.js"></script>
   </body>
 </html>
