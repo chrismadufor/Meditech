@@ -31,7 +31,9 @@ function loginAuth() {
       ) {
         window.location.assign("patient-dashboard.html");
         localStorage.setItem("presentUser", personObj.id);
-      } else if (usernameSignin.value == "dt10001") {
+      } else if (usernameSignin.value == personObj.email &&
+        passwordSignin.value == personObj.passWord &&
+        personObj.userType == "Doctor") {
         window.location.assign("Doctors-dashboard.html");
         // localStorage.setItem("presentUser", personObj.id);0
       } else if (usernameSignin.value == "ad10001") {
