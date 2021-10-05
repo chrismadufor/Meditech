@@ -23,20 +23,15 @@
         </div>
         <ul class="side-nav-links">
           <li>
-            <a href="patient-dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+            <a href="doctors-dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
           </li>
           <li>
-            <a href="patient-appointment.html"
+            <a href="doctors-appointment.html"
               ><i class="fas fa-list"></i> <span>Appointments</span></a
             >
           </li>
           <li>
-            <a href="health-tips.html"
-              ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
-            >
-          </li>
-          <li>
-            <a href="patient-notifications.html"
+            <a href="doctors-notifications.html"
               ><i class="fas fa-bell"></i><span>Notifications</span></a
             >
           </li>
@@ -44,7 +39,7 @@
             <a href=""><i class="fas fa-user"></i> <span>Profile</span></a>
           </li>
           <li>
-            <a href="patient-settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+            <a href="doctors-settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
           </li>
           <li class="log-out" onclick="modal();">
             <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
@@ -90,22 +85,22 @@
               <div class="basic-info flex">
                 <div>
                   <div class="info-item">
-                    <p class="info-item-title patient-name">Full Name</p>
-                    <p class="profileName">Abiola Odeyemi</p>
+                    <p class="info-item-title doctor-name">Full Name</p>
+                    <p class="profileName">Jessica Alaba</p>
                   </div>
                   <div class="info-item">
-                    <p class="info-item-title patient-id">Hospital ID</p>
-                    <p class="profileHosID">HPT10001</p>
+                    <p class="info-item-title doctor-id">Doctor ID</p>
+                    <p class="doctor-id">HPT10001</p>
                   </div>
                 </div>
                 <div class="wide">
                   <div class="info-item">
-                    <p class="info-item-title patient-email">Email</p>
-                    <p class="profileEmail">abbyodeyemi@gmail.com</p>
+                    <p class="info-item-title doctor-email">Email</p>
+                    <p class="profileEmail">drjessicaalaba@gmail.com</p>
                   </div>
                   <div class="info-item">
-                    <p class="info-item-title patient-phone">Phone Number</p>
-                    <p class="profilePhone">08143753983</p>
+                    <p class="info-item-title doctor-dept">Department</p>
+                    <p class="profilePhone">Gynaecology</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +110,7 @@
                 <div>
                   <div class="info-item">
                     <p class="info-item-title">Date of birth</p>
-                    <p class="profileDOB">20-10-1991</p>
+                    <p class="profileDOB">03-04-1994</p>
                   </div>
                   <div class="info-item">
                     <p class="info-item-title">City</p>
@@ -130,7 +125,7 @@
                   <div class="info-item">
                     <p class="info-item-title">Address</p>
                     <p class="profileAdd">
-                      No 25, Kadir Salami Street, Maitama, Abuja
+                      No 5, Shamshudeen Aderoju Street, Maitama, Abuja
                     </p>
                   </div>
                 </div>
@@ -150,66 +145,66 @@
           <div class="img-preview">
             <img class="edit-profile-img" src="img/profile-picture.jpg" alt="" />
           </div>
-          <input type="file" name="profile-image" id="patient-image" />
+          <input type="file" name="profile-image" id="doctor-image" />
         </div>
         <div class="input-wrap">
           <div class="form-input">
-            <label for="patient-name">Name</label>
+            <label for="doctor-name">Name</label>
             <input
               type="text"
-              id="patient-name"
+              id="doctor-name"
               placeholder="Enter your name"
             />
           </div>
           <div class="form-input">
-            <label for="patient-email">Email</label>
+            <label for="doctor-email">Email</label>
             <input
               type="text"
-              id="patient-email"
+              id="doctor-email"
               placeholder="Enter your email"
             />
           </div>
           <div class="form-input">
-            <label for="patient-id">Hospital ID</label>
-            <input type="text" id="patient-id" />
+            <label for="doctor-id">Hospital ID</label>
+            <input type="text" id="doctor-id" />
           </div>
           <div class="form-input">
-            <label for="patient-phone">Phone Number</label>
+            <label for="doctor-phone">Phone Number</label>
             <input
               type="text"
-              id="patient-phone"
+              id="doctor-phone"
               placeholder="Enter your phone number"
             />
           </div>
           <div class="form-input">
-            <label for="patient-dob">Date of birth</label>
+            <label for="doctor-dob">Date of birth</label>
             <input
               type="text"
-              id="patient-dob"
+              id="doctor-dob"
               placeholder="Enter your date of birth"
             />
           </div>
           <div class="form-input">
-            <label for="patient-nationality">Nationality</label>
+            <label for="doctor-nationality">Nationality</label>
             <input
               type="text"
-              id="patient-nationality"
+              id="doctor-nationality"
               placeholder="Enter your nationality"
             />
           </div>
           <div class="form-input">
-            <label for="patient-city">City</label>
+            <label for="doctor-city">City</label>
             <input
               type="text"
-              id="patient-city"
+              id="doctor-city"
               placeholder="Enter your city"
             />
           </div>
           <div class="form-input">
-            <label for="patient-address">Address</label>
+            <label for="doctor-address">Address</label>
             <input
               type="text"
-              id="patient-address"
+              id="doctor-address"
               placeholder="Enter your address"
             />
           </div>
@@ -237,3 +232,4 @@
     <script src="js/patient-profile.js"></script>
   </body>
 </html>
+
