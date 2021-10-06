@@ -1,7 +1,7 @@
 .container{
     /* background-color: chocolate; */
 }
-.top-nav i.fa-cog, i.fa-bell{
+.top-nav i.fa-cog, .top-nav i.fa-bell{
   color: #00A8DB;
 }
 
