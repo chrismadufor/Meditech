@@ -110,6 +110,9 @@ img {
   width: calc(100% - 240px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
+.top-nav button {
+  display: flex;
+}
 .page-name {
   display: flex;
   align-items: center;

@@ -1,3 +1,7 @@
+function openAppointmentsPage() {
+    window.location.assign('book-appointment.html')
+}
+
 function bookAppointmentSuccess() {
     let bookAppointment = document.getElementById('book-appointment-successful');
     if (bookAppointment.style.display === 'none') {
@@ -24,13 +28,15 @@ function bookAnAppointment() {
         department: dept.value
     }
     
-    let userDb = JSON.parse(localStorage.getItem("userDb"));
+    let userDb = JSON.parse(localStorage.getItem("userDB"));
     if (userDb === null) userDb = [];
-    if (userDb[0] === undefined) userDb[0] = {};
-    if (!userDb[0].appointments) userDb[0].appointments = [];
-    userDb[0].appointments.unshift(appointmentItem)
+    userDb.forEach(record => {
+        if(presentUserId === record.id) {
+            record.appointments.unshift(appointmentItem)
+        }
+    })
 
-    localStorage.setItem("userDb", JSON.stringify(userDb));
+    localStorage.setItem("userDB", JSON.stringify(userDb));
 
     bookAppointmentSuccess()
 
@@ -41,7 +47,8 @@ function bookAnAppointment() {
 }
 
 function showAppointmentOnPage() {
-    let userDb = JSON.parse(localStorage.getItem("userDb"));
+    let controls = document.querySelector(".tableControls")
+    let userDb = JSON.parse(localStorage.getItem("userDB"));
     let presentUserId = localStorage.getItem("presentUser");
     let tableBody = document.getElementById("table-body")
     tableBody.innerHTML = ""
@@ -49,6 +56,8 @@ function showAppointmentOnPage() {
         if(presentUserId === record.id) {
             if (!record.appointments) {
                 tableBody.innerHTML = "No appointments has been booked"
+                controls.style.display = "none"
+
             } else {
                 record.appointments.forEach(appointment => {
                     let tableRow = document.createElement('tr');
@@ -62,6 +71,7 @@ function showAppointmentOnPage() {
                     <td>
                     <div  class="tableTag pending">Pending</div></td>`
                     tableBody.append(tableRow)
+                controls.style.display = "block"
                })
             }
         }
