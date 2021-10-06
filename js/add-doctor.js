@@ -2,7 +2,7 @@
 
 function addDoctor() {
 
-    let doctorDataArray = JSON.parse(localStorage.getItem("doctorDb"))
+    let doctorDataArray = JSON.parse(localStorage.getItem("userDB"))
 
     let name = document.getElementById("doctor-name");
     let email = document.getElementById("doctor-email");
@@ -57,7 +57,7 @@ function addDoctor() {
     }
     doctorDataArray.push(doctorProfile);
 
-    localStorage.setItem("doctorDb", JSON.stringify(doctorDataArray));
+    localStorage.setItem("userDB", JSON.stringify(doctorDataArray));
     console.log('success')
 
     name.value = "";
