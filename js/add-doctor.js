@@ -9,7 +9,7 @@ function addDoctor() {
     let id = document.getElementById("doctor-id");
     let department = document.getElementById("doctor-dept");
 
-    const response = document.getElementById("response")
+    const response = document.getElementById("response");
 
     let nameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -45,6 +45,7 @@ function addDoctor() {
     doctorProfile.nationality = "";
     doctorProfile.city = "";
     doctorProfile.address = "";
+    doctorProfile.appointments = [];
     doctorProfile.profilePhoto = "";
     doctorProfile.randomId = Math.random();
 

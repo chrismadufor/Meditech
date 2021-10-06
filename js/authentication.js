@@ -22,6 +22,7 @@ function authenticateDetails() {
     userLogin.city = "";
     userLogin.address = "";
     userLogin.profilePhoto = "";
+    userLogin.appointments = [];
     userLogin.id = Math.random();
     userNameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
