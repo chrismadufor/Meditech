@@ -1,23 +1,27 @@
 window.onload = function addDoctorProfile(){
-    let doctorDataArray = JSON.parse(localStorage.getItem("userDB"));
-
+    var doctorDataArray = JSON.parse(localStorage.getItem("userDB"));
     let docProfileContainer = document.getElementById('doctor-profile-container');
-    docProfileContainer.innerHTML = ''
-    if(!doctorDataArray){
-        docProfileContainer.innerHTML += 
-        `<h2 style="text-align: center; width: 100%; 
-        margin: 50px 0;">No doctors in database</h2>`
-    } else {
-        let len = doctorDataArray.length - 1;
-        let i = len;
-        let stopper = 0;
-    while (stopper < 8) {
-        
-        if(doctorDataArray[i].userType === "Doctor"){
+    let doctorArray = new Array();
 
-        let doctorDepartment = doctorDataArray[i].department.toUpperCase();
-        let doctorName = doctorDataArray[i].name.toUpperCase();
+    docProfileContainer.innerHTML = 
+        `<h2 id="header-main" style="text-align: center; width: 100%; 
+        margin: 50px 0;">No doctors in database</h2>`
+
+    doctorDataArray.forEach(doctor => {
+        
+        if ((doctor.userType === "Doctor") && doctorArray.length !== 8) {
+            doctorArray.push(doctor);
+        }
+    });
+
+    if (!(doctorArray.length === 0)) {
+        doctorArray.forEach(doctor => {
+
+            let header = document.getElementById('header-main');
+            let doctorDepartment = doctor.department.toUpperCase();
+            let doctorName = doctor.name.toUpperCase();
      
+            header.style.display = "none"
             docProfileContainer.innerHTML += `
             <div class="card">
             <div class="doctor-image">
@@ -34,14 +38,7 @@ window.onload = function addDoctorProfile(){
             </div>
             </div>
             `
-            stopper++;
-            } else {
-                docProfileContainer.innerHTML += 
-        `<h2 style="text-align: center; width: 100%; 
-        margin: 50px 0;">No doctors in database</h2>`
-            }
-            i--;
-        }
-  
+            
+        });
     }
 }
