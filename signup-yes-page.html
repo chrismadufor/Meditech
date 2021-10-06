@@ -11,7 +11,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/dashboard-template.css">
+    <link rel="stylesheet" href="./css/dashboard-template.css" />
     <link rel="stylesheet" href="./css/stylesheet.css" />
   </head>
   <body>
@@ -29,9 +29,21 @@
             <form action="">
               <input type="text" name="#" id="username" placeholder="Name" />
               <input type="email" name="#" id="email" placeholder="Email" />
-              <input type="text" name="#" id="hospitalid" placeholder="Hospital ID" />
-              <input type="password" name="#" id="password" placeholder="Password" />
-              <a onclick="authenticateDetails()"><button type="button">SIGN UP</button></a>
+              <input
+                type="text"
+                name="#"
+                id="hospitalid"
+                placeholder="Hospital ID"
+              />
+              <input
+                type="password"
+                name="#"
+                id="password"
+                placeholder="Password"
+              />
+              <a onclick="authenticateDetails()"
+                ><button type="button">SIGN UP</button></a
+              >
             </form>
           </div>
         </div>
@@ -44,8 +56,8 @@
     </section>
     <div class="modal" id="sign-up-successful">
       <div class="log-out-wrap">
-          <p>Registration Successful</p>
-          <i class="far fa-check-circle"></i>
+        <p>Registration Successful</p>
+        <i class="far fa-check-circle"></i>
       </div>
     </div>
     <script src="/js/authentication.js"></script>
