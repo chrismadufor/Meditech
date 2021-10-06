@@ -7,11 +7,12 @@ window.onload = function addDoctorProfile(){
         `<h2 id="header-main" style="text-align: center; width: 100%; 
         margin: 50px 0;">No doctors in database</h2>`
 
-    for(let i = 0; i < 9; i++){
-        if (doctorDataArray[i].userType === "Doctor") {
-            doctorArray.push(doctorDataArray[i]);
+    doctorDataArray.forEach(doctor => {
+        
+        if ((doctor.userType === "Doctor") && doctorArray.length !== 8) {
+            doctorArray.push(doctor);
         }
-    }
+    });
 
     if (!(doctorArray.length === 0)) {
         doctorArray.forEach(doctor => {
