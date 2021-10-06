@@ -18,6 +18,7 @@ function bookAnAppointment() {
     let dept = document.getElementById("department")
     let date = document.getElementById("appointment-date")
     let time = document.getElementById("appointment-time")
+    let presentUserId = localStorage.getItem("presentUser");
     let details = document.getElementById("appointment-details")
 
     let appointmentItem = {
