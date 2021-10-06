@@ -4,7 +4,7 @@ function bookAppointmentSuccess() {
         bookAppointment.style.display = 'block'
         setTimeout(() => {
             bookAppointment.style.display = 'none'
-            window.location.assign('patient-appointments.html')
+            window.location.assign('patient-appointment.html')
         }, 4000)
     } else bookAppointment.style.display = 'none'
 }
@@ -45,23 +45,25 @@ function showAppointmentOnPage() {
     let presentUserId = localStorage.getItem("presentUser");
     let tableBody = document.getElementById("table-body")
     tableBody.innerHTML = ""
-    let tableRow;
     userDb.forEach(record => {
         if(presentUserId === record.id) {
-           record.appointment.forEach(appointment => {
-            tableRow = `<tr>
-            <td  class="firstCol">
-              <span><img src="./img/avatarImg.png" /></span>
-             <span> ${appointment.doctorAssigned}</span></td>
-            <td>${appointment.date}</td>
-            <td>${appointment.time}</td>
-            <td>${appointment.doctorContact}</td>
-             <td>
-              
-              <div  class="tableTag pending">Cancelled</div></td>
-            </tr>`
-            tableBody.append(tableRow)
-           })
+            if (!record.appointments) {
+                tableBody.innerHTML = "No appointments has been booked"
+            } else {
+                record.appointments.forEach(appointment => {
+                    let tableRow = document.createElement('tr');
+                    tableRow.innerHTML = `
+                    <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                    <span> ${appointment.doctorAssigned}</span></td>
+                    <td>${appointment.appointmentDate}</td>
+                    <td>${appointment.appointmentTime}</td>
+                    <td>${appointment.doctorContact}</td>
+                    <td>
+                    <div  class="tableTag pending">Pending</div></td>`
+                    tableBody.append(tableRow)
+               })
+            }
         }
     })
     
