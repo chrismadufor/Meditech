@@ -17,6 +17,7 @@ function loginAuth() {
   console.log(passwordSignin.value);
 
   let userDb = JSON.parse(localStorage.getItem("userDB"));
+  let doctorDb = JSON.parse(localStorage.getItem("doctorDb"));
 
   if (usernameSignin.value == "") {
     usernameErr.innerText = "Username cannot be empty";
@@ -32,19 +33,25 @@ function loginAuth() {
         ) {
           window.location.assign("patient-dashboard.html");
           localStorage.setItem("presentUser", personObj.id);
-        } else if (
+        } else {
+          loginErr.innerText = "Username and password does not match";
+        }
+      });
+    } else if (doctorDb) {
+      doctorDb.forEach((personObj) => {
+        if (
           usernameSignin.value == personObj.email &&
           passwordSignin.value == personObj.passWord &&
           personObj.userType == "Doctor"
         ) {
           window.location.assign("Doctors-dashboard.html");
           localStorage.setItem("presentUser", personObj.id);
-        } else if (usernameSignin.value == "ad10001") {
-          window.location.assign("admin-dashboard.html");
         } else {
           loginErr.innerText = "Username and password does not match";
         }
       });
+    } else if (usernameSignin.value == "ad10001") {
+      window.location.assign("admin-dashboard.html");
     } else {
       loginErr.innerText = "No Record in Database";
     }
