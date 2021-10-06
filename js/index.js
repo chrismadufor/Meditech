@@ -22,17 +22,6 @@ function signUpSuccess() {
     } else signUp.style.display = 'none'
 }
 
-function bookAppointmentSuccess() {
-    let bookAppointment = document.getElementById('book-appointment-successful');
-    if (bookAppointment.style.display === 'none') {
-        bookAppointment.style.display = 'block'
-        setTimeout(() => {
-            bookAppointment.style.display = 'none'
-            backHome()
-        }, 4000)
-    } else bookAppointment.style.display = 'none'
-}
-
 function addDoctorSuccess() {
     let addDoctor = document.getElementById('add-doctor-successful');
     if (addDoctor.style.display === 'none') {
@@ -45,9 +34,6 @@ function addDoctorSuccess() {
 
 function signOut() {
     window.location.assign('patient-signin.html')
-}
-function backHome() {
-    window.location.assign('patient-dashboard.html')
 }
 
 window.onclick = function(event) {
