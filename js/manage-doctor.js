@@ -1,5 +1,5 @@
 window.onload = function addDoctorProfile(){
-    let doctorDataArray = JSON.parse(localStorage.getItem("doctorDb"));
+    let doctorDataArray = JSON.parse(localStorage.getItem("userDB"));
 
     let docProfileContainer = document.getElementById('doctor-profile-container');
     docProfileContainer.innerHTML = ''
@@ -9,8 +9,11 @@ window.onload = function addDoctorProfile(){
         margin: 50px 0;">No doctors in database</h2>`
     } else {
         let len = doctorDataArray.length - 1;
-
-    for(let i = len; i >= len - 5; i--){
+        let i = len;
+        let stopper = 0;
+    while (stopper < 8) {
+        
+        if(doctorDataArray[i].userType === "Doctor"){
 
         let doctorDepartment = doctorDataArray[i].department.toUpperCase();
         let doctorName = doctorDataArray[i].name.toUpperCase();
@@ -31,7 +34,10 @@ window.onload = function addDoctorProfile(){
             </div>
             </div>
             `
-    }
+            stopper++;
+            }
+            i--;
+        }
   
     }
 }
