@@ -62,6 +62,7 @@ function authenticateDetails() {
 }
 function signUpSuccess() {
   let signUp = document.getElementById('sign-up-successful');
+  signUp.style.display = 'none'
   if (signUp.style.display === 'none') {
       signUp.style.display = 'block'
       setTimeout(() => {

@@ -35,6 +35,10 @@ window.onload = function addDoctorProfile(){
             </div>
             `
             stopper++;
+            } else {
+                docProfileContainer.innerHTML += 
+        `<h2 style="text-align: center; width: 100%; 
+        margin: 50px 0;">No doctors in database</h2>`
             }
             i--;
         }
