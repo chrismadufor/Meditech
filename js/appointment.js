@@ -4,6 +4,7 @@ function openAppointmentsPage() {
 
 function bookAppointmentSuccess() {
     let bookAppointment = document.getElementById('book-appointment-successful');
+    bookAppointment.style.display = "none"
     if (bookAppointment.style.display === 'none') {
         bookAppointment.style.display = 'block'
         setTimeout(() => {
@@ -29,10 +30,9 @@ function bookAnAppointment() {
         department: dept.value
     }
     
-    let userDb = JSON.parse(localStorage.getItem("userDB"));
-    if (userDb === null) userDb = [];
+    let userDb = JSON.parse(localStorage.getItem("userDB"));    
     userDb.forEach(record => {
-        if(presentUserId === record.id) {
+        if(presentUserId == record.id) {
             record.appointments.unshift(appointmentItem)
         }
     })
@@ -52,10 +52,11 @@ function showAppointmentOnPage() {
     let userDb = JSON.parse(localStorage.getItem("userDB"));
     let presentUserId = localStorage.getItem("presentUser");
     let tableBody = document.getElementById("table-body")
+    console.log(userDb)
     tableBody.innerHTML = ""
     userDb.forEach(record => {
-        if(presentUserId === record.id) {
-            if (!record.appointments) {
+        if(presentUserId == record.id) {
+            if (record.appointments === []) {
                 tableBody.innerHTML = "No appointments has been booked"
                 controls.style.display = "none"
 
@@ -72,7 +73,7 @@ function showAppointmentOnPage() {
                     <td>
                     <div  class="tableTag pending">Pending</div></td>`
                     tableBody.append(tableRow)
-                controls.style.display = "block"
+                controls.style.display = "flex"
                })
             }
         }

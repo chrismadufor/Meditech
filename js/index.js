@@ -13,6 +13,7 @@ function editProfile() {
 
 function signUpSuccess() {
     let signUp = document.getElementById('sign-up-successful');
+    signUp.style.display = "none"
     if (signUp.style.display === 'none') {
         signUp.style.display = 'block'
         setTimeout(() => {
@@ -24,6 +25,7 @@ function signUpSuccess() {
 
 function addDoctorSuccess() {
     let addDoctor = document.getElementById('add-doctor-successful');
+    addDoctor.style.display = "none"
     if (addDoctor.style.display === 'none') {
         addDoctor.style.display = 'block'
         setTimeout(() => {
