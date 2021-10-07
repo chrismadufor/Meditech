@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/patient-profile.css" />
+    <link rel="stylesheet" href="css/add-doctors.css" />
+
+    <title>Welcome, Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-nav">
+        <div class="header">
+          <img src="img/logo.svg" alt="#" />
+          <h2>MEDITECH</h2>
+        </div>
+        <ul class="side-nav-links">
+          <li>
+            <a href="admin-dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="admin-appointment.html"
+              ><i class="fas fa-list"></i> <span>Appointments</span></a
+            >
+          </li>
+          <li class="active">
+            <a href="manage-doctors.html"
+              ><i class="fas fa-users"></i><span>Manage Doctors</span></a
+            >
+          </li>
+          <li>
+            <a href="manage-patients.html"
+              ><i class="fas fa-users"></i><span>Manage Patients</span></a
+            >
+          </li>
+          <li>
+            <a href="admin-notifications.html"
+              ><i class="fas fa-bell"></i><span>Notifications</span></a
+            >
+          </li>
+          <li>
+            <a href="admin-profile.html"><i class="fas fa-user"></i> <span>Profile</span></a>
+          </li>
+          <li>
+            <a href="admin-settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+          </li>
+          <li class="log-out" onclick=" modal();">
+            <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="top-nav">
+            <div class="page-name">
+              <i class="fas fa-bars"></i>
+              <p>Manage Doctors</p>
+            </div>
+            <div class="profile-details">
+              <!-- Use the search only if it is on your page -->
+              <!-- <div class="search-field">
+                <input type="text" placeholder="Search for something" />
+                <div class="search-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div> -->
+              <div class="notification-icons">
+                <div class="message-icon">
+                  <i class="fas fa-cog"></i>
+                </div>
+                <div class="bell-icon">
+                  <i class="fas fa-bell"></i>
+                </div>
+              </div>
+              <img src="img/profile-picture.jpg" alt="" class="patient-img"/>
+            </div>
+        </div>
+        <div class="main-content">
+          <!-- ALL YOUR WORK GOES HERE -->
+         
+          <form action="#">
+            <h1>Add New Doctor</h1>
+            <p id="response"></p>
+            <div class="form-input">
+                <label for="doctor-name">Name</label>
+                <input
+                  type="text"
+                  id="doctor-name"
+                  placeholder="Enter Name"
+                />
+            </div>
+            <div class="form-input">
+                <label for="doctor-email">Email</label>
+                <input
+                  type="text"
+                  id="doctor-email"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <div class="form-input">
+                <label for="doctor-id">Doctor ID</label>
+                <input type="text" id="doctor-id" placeholder="Enter ID"/>
+              </div>
+              <div class="form-input">
+                <label for="doctor-dept">Department</label>
+                <!-- <input type="text" id="doctor-dept" placeholder="Enter department"/> -->
+                <select name="department" id="doctor-dept">
+                  <option value="gynaecology">Enter department</option>
+                  <option value="gynaecology">Gynaecology</option>
+                  <option value="pediatrics">Pediatrics</option>
+                </select> 
+              </div>
+              <input type="button" value="ADD DOCTOR" class="submit-form" onclick="addDoctor();">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="log-out-wrap">
+        <p>Are you sure you want to log out?</p>
+        <div class="button-wrap">
+          <button class="warning" onclick="signOut();">Yes</button>
+          <button class="blue" onclick="modal();">No</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="add-doctor-successful">
+        <div class="log-out-wrap">
+            <p>Doctor added successfully</p>
+            <i class="far fa-check-circle"></i>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="/js/add-doctor.js"></script>
+  </body>
+</html>

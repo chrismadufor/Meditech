@@ -1,0 +1,19 @@
+form {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 40px;
+}
+form > div {
+    padding: 30px 0 30px ;
+}
+form > input, form > select {
+    margin: 40px 0;
+} 
+form input, .form-input {
+    width: 100%;
+    max-width: 500px;
+}
+#response{
+    width: 100%;
+    margin: 30px 0 0 30px;
+    color: red;
+}

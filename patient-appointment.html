@@ -31,20 +31,20 @@
             >
           </li>
           <li>
-            <a href="#"
+            <a href="/health-tips.html"
               ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
             >
           </li>
           <li>
-            <a href="#"
+            <a href="/patient-notifications.html"
               ><i class="fas fa-bell"></i><span>Notifications</span></a
             >
           </li>
           <li>
-            <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+            <a href="/patient-profile.html"><i class="fas fa-user"></i> <span>Profile</span></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+            <a href="/patient-settings"><i class="fas fa-cog"></i> <span>Settings</span></a>
           </li>
           <li class="log-out" onclick=" modal();">
             <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
@@ -58,11 +58,9 @@
             <p>Appointments</p>
           </div>
           <div class="profile-details">
-            <button class="new-appointments">
-              New Appointment
-              <span>
-                <img src="img/plus sign.png" alt="">
-              </span>
+            <button class="new-appointments" onclick="openAppointmentsPage();">New Appointment <span>
+              <img src="img/plus sign.png" alt="">
+            </span>
             </button>
   
             <div class="notification-icons">
@@ -100,83 +98,86 @@
                 <th>Contact</th>
                 <th>Status</th>
               </thead>
-              <tr>
-                <td class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                 <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                <td>
-                  
-                  <div  class="tableTag pending">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                <td>
-                  
-                  <div  class="tableTag pending">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag completed">Completed</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                 <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag pending">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                <td>
-                  
-                  <div  class="tableTag completed">Completed</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag pending">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                 <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag cancelled">Cancelled</div></td>
-              </tr>
+              <tbody id="table-body">
+                <tr>
+                  <td class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                   <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                  <td>
+                    
+                    <div  class="tableTag pending">Pending</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                    <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                  <td>
+                    
+                    <div  class="tableTag pending">Pending</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                    <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                   <td>
+                    
+                    <div  class="tableTag completed">Completed</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                   <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                   <td>
+                    
+                    <div  class="tableTag pending">Pending</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                    <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                  <td>
+                    
+                    <div  class="tableTag completed">Completed</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                    <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                   <td>
+                    
+                    <div  class="tableTag pending">Pending</div></td>
+                </tr>
+                <tr>
+                  <td  class="firstCol">
+                    <span><img src="./img/avatarImg.png" /></span>
+                   <span> Geraldine Agwuike</span></td>
+                  <td>18-09-2021</td>
+                  <td>11:00AM</td>
+                  <td>07068392790</td>
+                   <td>
+                    
+                    <div  class="tableTag cancelled">Cancelled</div></td>
+                </tr>
+
+              </tbody>
             </table>
             <div class="tableControls">
               <div class="control-box">
@@ -210,5 +211,6 @@
       </div>
     </div>
     <script src="js/index.js"></script>
+    <script src="js/appointment.js"></script>
   </body>
 </html>
