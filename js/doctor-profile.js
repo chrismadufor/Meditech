@@ -2,14 +2,6 @@ let userDb = JSON.parse(localStorage.getItem("userDB"));
 let presentUserId = localStorage.getItem("presentUser");
 console.log(userDb);
 
-doctor-name
-doctor-email
-doctor-id
-doctor-phone
-doctor-dob
-doctor-nationality
-doctor-city
-doctor-address
 
 var editProfileBtn = document.querySelector(".edit-profile");
 
@@ -97,8 +89,8 @@ editProfileBtn.addEventListener("click", editProfModal);
 function editProfModal() {
   userDb.forEach((personData) => {
     if (presentUserId == personData.id) {
-      editprofileName.value = personData.userName;
-      editprofileHosID.value = personData.hospitalId;
+      editprofileName.value = personData.name;
+      editprofileHosID.value = personData.id;
       editprofileEmail.value = personData.email;
       editprofilePhone.value = personData.phoneNumber;
       editprofileDOB.value = personData.dateOfBirth;
@@ -121,8 +113,8 @@ function editProfModal() {
 function saveEdit() {
   userDb.forEach((personData, index, array) => {
     if (presentUserId == personData.id) {
-      personData.userName = editprofileName.value;
-      personData.hospitalId = editprofileHosID.value;
+      personData.name = editprofileName.value;
+      personData.id = editprofileHosID.value;
       personData.email = editprofileEmail.value;
       personData.phoneNumber = editprofilePhone.value;
       personData.dateOfBirth = editprofileDOB.value;
