@@ -20,12 +20,19 @@ window.onload = function addDoctorProfile(){
             let header = document.getElementById('header-main');
             let doctorDepartment = doctor.department.toUpperCase();
             let doctorName = doctor.name.toUpperCase();
+            let profileSrc;
+            if(doctor.profilePhoto){
+                profileSrc = "./img/9.png"
+            }else{
+                profileSrc = "data:image/jpeg;base64," + doctor.profilePhoto
+            }
+            
      
             header.style.display = "none"
             docProfileContainer.innerHTML += `
             <div class="card">
             <div class="doctor-image">
-                <img src="./img/9.png" alt="">
+                <img src=${profileSrc} alt="">
             </div>
             <div class="doctor-text">
                 <p class="name">${doctorName}</p>
