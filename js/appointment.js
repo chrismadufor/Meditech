@@ -53,25 +53,25 @@ function showAppointmentOnPage() {
     let presentUserId = localStorage.getItem("presentUser");
     let tableBody = document.getElementById("table-body")
     console.log(userDb)
-    tableBody.innerHTML = ""
+    tableBody.innerHTML = `<p style = "margin: 20px;">No appointments has been booked</p>`
+    controls.style.display = "none"
     userDb.forEach(record => {
         if(presentUserId == record.id) {
-            if (record.appointments === []) {
-                tableBody.innerHTML = "No appointments has been booked"
-                controls.style.display = "none"
+            if (record.appointments == []) {
 
             } else {
+                tableBody.innerHTML = ``
                 record.appointments.forEach(appointment => {
                     let tableRow = document.createElement('tr');
                     tableRow.innerHTML = `
-                    <td  class="firstCol">
+                    <td class="firstCol">
                     <span><img src="./img/avatarImg.png" /></span>
-                    <span> ${appointment.doctorAssigned}</span></td>
+                    <span>${appointment.doctorAssigned}</span></td>
                     <td>${appointment.appointmentDate}</td>
                     <td>${appointment.appointmentTime}</td>
                     <td>${appointment.doctorContact}</td>
                     <td>
-                    <div  class="tableTag pending">Pending</div></td>`
+                    <div class="tableTag pending">Pending</div></td>`
                     tableBody.append(tableRow)
                 controls.style.display = "flex"
                })
