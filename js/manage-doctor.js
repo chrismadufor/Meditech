@@ -21,7 +21,7 @@ window.onload = function addDoctorProfile(){
             let doctorDepartment = doctor.department.toUpperCase();
             let doctorName = doctor.name.toUpperCase();
             let profileSrc;
-            if(doctor.profilePhoto){
+            if(doctor.profilePhoto == ""){
                 profileSrc = "./img/9.png"
             }else{
                 profileSrc = "data:image/jpeg;base64," + doctor.profilePhoto
