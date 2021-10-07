@@ -47,6 +47,7 @@ function addDoctor() {
     doctorProfile.address = "";
     doctorProfile.appointments = [];
     doctorProfile.profilePhoto = "";
+    doctorProfile.password = "1234567890"
     doctorProfile.randomId = Math.random();
 
 
