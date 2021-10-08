@@ -2,14 +2,14 @@
 
 function addDoctor() {
 
-    let doctorDataArray = JSON.parse(localStorage.getItem("doctorDb"))
+    let doctorDataArray = JSON.parse(localStorage.getItem("userDB"))
 
     let name = document.getElementById("doctor-name");
     let email = document.getElementById("doctor-email");
     let id = document.getElementById("doctor-id");
     let department = document.getElementById("doctor-dept");
 
-    const response = document.getElementById("response")
+    const response = document.getElementById("response");
 
     let nameFormat = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -45,7 +45,9 @@ function addDoctor() {
     doctorProfile.nationality = "";
     doctorProfile.city = "";
     doctorProfile.address = "";
+    doctorProfile.appointments = [];
     doctorProfile.profilePhoto = "";
+    doctorProfile.passWord = "1234567890"
     doctorProfile.randomId = Math.random();
 
 
@@ -56,7 +58,7 @@ function addDoctor() {
     }
     doctorDataArray.push(doctorProfile);
 
-    localStorage.setItem("doctorDb", JSON.stringify(doctorDataArray));
+    localStorage.setItem("userDB", JSON.stringify(doctorDataArray));
     console.log('success')
 
     name.value = "";

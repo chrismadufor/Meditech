@@ -111,9 +111,14 @@
               </div>
               <div class="form-input">
                 <label for="doctor-dept">Department</label>
-                <input type="text" id="doctor-dept" placeholder="Enter department"/>
+                <!-- <input type="text" id="doctor-dept" placeholder="Enter department"/> -->
+                <select name="department" id="doctor-dept">
+                  <option value="gynaecology">Enter department</option>
+                  <option value="gynaecology">Gynaecology</option>
+                  <option value="pediatrics">Pediatrics</option>
+                </select> 
               </div>
-              <input type="submit" value="ADD DOCTOR" class="submit-form" onclick="addDoctor();">
+              <input type="button" value="ADD DOCTOR" class="submit-form" onclick="addDoctor();">
           </form>
         </div>
       </div>

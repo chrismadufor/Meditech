@@ -92,17 +92,24 @@
               </select>
             </div>
             <div class="form-input">
-                <label for="appointment-date">Date</label>
-                <input
-                  type="datetime-local"
-                  id="appointment-date"
-                />
-              </div>
-              <div class="form-input">
-                <label for="appointment-details">Appointment Details (Optional)</label>
-                <input type="text" id="appointment-details" />
-              </div>
-              <input type="submit" value="BOOK APPOINTMENT" class="submit-form" onclick="bookAppointmentSuccess();">
+              <label for="appointment-date">Date</label>
+              <input
+                type="date"
+                id="appointment-date"
+              />
+            </div>
+            <div class="form-input">
+              <label for="appointment-time">time</label>
+              <input
+                type="time"
+                id="appointment-time"
+              />
+            </div>
+            <div class="form-input">
+              <label for="appointment-details">Appointment Details (Optional)</label>
+              <input type="text" id="appointment-details" />
+            </div>
+            <input type="button" value="BOOK APPOINTMENT" class="submit-form" onclick="bookAnAppointment();">
           </form>
         </div>
       </div>
@@ -124,5 +131,6 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="js/appointment.js"></script>
   </body>
 </html>
