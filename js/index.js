@@ -52,3 +52,25 @@ window.onclick = function(event) {
         editProfile()
     }
 }
+
+// Side Nav Stuff
+let navIcon = document.querySelector('.page-name i')
+navIcon.addEventListener('click', () => {
+    if(navIcon){}
+})
+
+function sideNavToggle() {
+    let sideNav = document.querySelector('.side-nav')
+    let sideNavText = document.querySelectorAll('.side-nav-links li span')
+    let sideNavLink = document.querySelectorAll ('.side-nav-links li')
+    let sideHeader = document.querySelector('.side-nav .header h2')
+    let main = document.querySelector('.main')
+    let topNav = document.querySelector('.top-nav')
+
+    sideNavText.forEach (item => item.style.display = 'none')
+    sideHeader.style.display = 'none'
+    sideNavLink.forEach (item => item.style.paddingRight = '40px')
+    sideNav.style.width = 'unset'
+    main.style.marginLeft = '100px'
+    topNav.style.width = 'calc(100% - 100px)'
+}

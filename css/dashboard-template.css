@@ -31,6 +31,7 @@ img {
 /* SIDE NAV */
 .side-nav {
   width: 240px;
+  padding: 0 0 0 20px;
   height: 100vh;
   background: linear-gradient(#00e3d5, #00a8db);
   display: flex;
@@ -44,7 +45,7 @@ img {
   align-items: center;
   /* justify-content: center; */
   height: 80px;
-  padding: 0 0 0 32px;
+  padding: 0 0 0 20px;
 }
 .header img {
   height: 24px;
@@ -58,7 +59,7 @@ img {
 }
 .side-nav-links {
   margin-top: 10px;
-  padding: 0 0 0 12px;
+  /* padding: 0 12px; */
 }
 .side-nav-links li {
   color: white;
@@ -71,6 +72,7 @@ img {
   font-size: 14px;
   border-radius: 15px 0 0 15px;
   cursor: pointer;
+  /* width: 200px; */
 }
 .side-nav-links span {
   margin-left: 24px;
@@ -121,6 +123,9 @@ img {
   font-size: 20px;
   margin-left: 20px;
   font-weight: bold;
+}
+.page-name i {
+  cursor: pointer;
 }
 .search-field {
   position: relative;

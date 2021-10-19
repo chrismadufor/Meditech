@@ -16,19 +16,19 @@ html{
 /* HEADER */
 
 header{
-  height: 10vh;
+  height: 80px;
   width: 100%;
   background-color: #00A8DB;
-}
-
-.header{
-  height: inherit;
-  width: 85%;
-  background-color: inherit;
+  padding: 0 5%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  display: block;
+  height: 100%;
 }
 
 .logo{
@@ -52,28 +52,26 @@ header{
 
 .hero-background{
   height: 75vh;
+  max-height: 500px;
   width: 100%;
   background-color: #F5FFFD;
 }
 
 .hero{
-  height: inherit;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 5vh;
+  padding: 40px 5%;
+  align-items: center;
 }
 
-.heroimage{
-  height: 90%;
-  width: 90%;
+.heroleft {
+  width: 60%;
+}
+.hero > img {
+  width: 40%;
 }
 
-.hero{
-  height: inherit;
-  width: 85%;
-  background-color: inherit;
-  margin: 0 auto;
-}
 
 .heroleft h1{
   margin-top: 3rem;
@@ -97,11 +95,15 @@ header{
   border-radius: 0.8rem;
 }
 
-.heroleft p span{
-  margin-right: 1.3rem;
-  position: relative;
-  top: 0.3rem;
+.heroleft p {
+  display: flex;
+  align-items: center;
 }
+
+.heroleft p i{
+  margin-right: 10px;
+}
+
 /* hero */
 
 /* quality-system-background */
@@ -277,3 +279,20 @@ header{
   font-family: 'Montserrat';
 }
 /* footer */
+
+@media (max-width: 1150px) {
+  .heroleft h1 {
+    font-size: 30px;
+  }
+  .heroleft p {
+    font-size: 16px;
+    /* line-height: unset; */
+  }
+  .heroleft p img {
+    display: inline;
+    margin-right: 10px;
+  }
+  .heroimage {
+    
+  }
+}
