@@ -156,13 +156,6 @@ const dummyData = [
     }
 ]
 
-let current_page = 1;
-let records_per_page = 7;
-let btn_next = document.getElementsByClassName("control-box")[3];
-let btn_next_double = document.getElementsByClassName("control-box")[4];
-let btn_prev = document.getElementsByClassName("control-box")[1];
-let btn_prev_double = document.getElementsByClassName("control-box")[0];
-
 function modal() {
     let modal = document.getElementById('modal');
     if (modal.style.display === 'block') {
@@ -207,6 +200,33 @@ function addDoctorSuccess() {
 function signOut() {
     window.location.assign('patient-signin.html')
 }
+
+window.onclick = function(event) {
+    let closeModal = document.getElementById('modal');
+    let signUp = document.getElementById('sign-up-successful');
+    let editProfileModal = document.getElementById('edit-profile-modal');
+    let appointment = document.getElementById('appointment-details')
+    if (event.target == closeModal) {
+        modal()
+    }
+    if (event.target == signUp) {
+        signUpSuccess()
+    }
+    if (event.target == editProfileModal) {
+        editProfile()
+    }
+    if (event.target == appointment) {
+        openAppointments()
+    }
+}
+
+let current_page = 1;
+let records_per_page = 7;
+let btn_next = document.getElementsByClassName("control-box")[3];
+let btn_next_double = document.getElementsByClassName("control-box")[4];
+let btn_prev = document.getElementsByClassName("control-box")[1];
+let btn_prev_double = document.getElementsByClassName("control-box")[0];
+
 
 let numberOfPages = () =>  Math.ceil(dummyData.length / records_per_page);
 
@@ -270,7 +290,6 @@ let handleBtnVisibility = (page) => {
 
 function changePage(page){
     
-    //***************************** */
     let page_span = document.getElementsByClassName("control-box")[2];
     let tableBody = document.getElementById("table-body-ad")
 
@@ -291,6 +310,7 @@ function changePage(page){
                     openAppointments()
                 })
             })
+            console.log(appointments)
             tableRow.innerHTML = `
             <td class="firstCol">
             <span><img src="./img/avatarImg.png" /></span>
@@ -299,7 +319,7 @@ function changePage(page){
             <td>${appointments[i].appointmentTime}</td>
             <td>${appointments[i].doctorContact}</td>
             <td>
-                <div class="tableTag ${appointments[i].status.toLocaleLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
+                <div class="tableTag ${appointments[i].status.toLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
             </td>`
             tableBody.append(tableRow)
         }
@@ -333,23 +353,3 @@ function changePage(page){
 }
 
 changePage(1)
-
-window.onclick = function(event) {
-    let closeModal = document.getElementById('modal');
-    let signUp = document.getElementById('sign-up-successful');
-    let editProfileModal = document.getElementById('edit-profile-modal');
-    let appointment = document.getElementById('appointment-details')
-    if (event.target == closeModal) {
-        modal()
-    }
-    if (event.target == signUp) {
-        signUpSuccess()
-    }
-    if (event.target == editProfileModal) {
-        editProfile()
-    }
-    if (event.target == appointment) {
-        openAppointments()
-    }
-}
-

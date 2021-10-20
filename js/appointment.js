@@ -23,11 +23,12 @@ function bookAnAppointment() {
     let details = document.getElementById("appointment-details")
 
     let appointmentItem = {
-        doctorAssigned: "Jessica Alaba",
+        doctorAssigned: "Grace Ekweremadu",
         doctorContact: "0709943765",
         appointmentDate: date.value,
         appointmentTime: time.value,
-        department: dept.value
+        department: dept.value,
+        status: "pending"
     }
     
     let userDb = JSON.parse(localStorage.getItem("userDB"));    
@@ -81,3 +82,4 @@ function showAppointmentOnPage() {
     
 }
 // showAppointmentOnPage()
+
