@@ -51,10 +51,10 @@
           </li>
         </ul>
       </div>
-      <main class="main">
+      <div class="main">
         <div class="top-nav">
           <div class="page-name">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars show"></i>
             <p>Appointments</p>
           </div>
           <div class="profile-details">
@@ -89,7 +89,7 @@
                 <option value="completed">Completed</option>
                 </select>
           </div>
-            <div class="tableComponent">
+          <div class="tableComponent">
             <table>
               <thead>
                 <th>Doctor Assigned</th>
@@ -98,7 +98,7 @@
                 <th>Contact</th>
                 <th>Status</th>
               </thead>
-              <tbody id="table-body">
+              <tbody id="table-body-ad">
                 <tr>
                   <td class="firstCol">
                     <span><img src="./img/avatarImg.png" /></span>
@@ -197,8 +197,8 @@
               </div>
             </div>
           </div>
-    </div>
         </div>
+        
       </div>
     </div>
     <div class="modal" id="modal">
@@ -210,8 +210,17 @@
         </div>
       </div>
     </div>
-    <script src="js/index.js"></script>
+    <div class="modal" id="appointment-details">
+      <div class="log-out-wrap">
+        <p>Do you want to cancel this appointment?</p>
+        <div class="button-wrap">
+          <button id="cancel-btn" class="blue">Yes</button>
+          <button class="warning" onclick="openAppointments();">No</button>
+        </div>
+      </div>
+    </div>
     <script src="js/appointment.js"></script>
+    <script src="js/index.js"></script>
     <script src="/js/topnav.js"></script>
   </body>
 </html>

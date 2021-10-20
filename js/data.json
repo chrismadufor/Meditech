@@ -15,7 +15,7 @@
                 "appointmentDate": "2021-10-12",
                 "appointmentTime": "10:15",
                 "status": "pending"
-            }, 
+            },
             {
                 "patientAssigned": "Joseph Bello",
                 "patientContact": "07056548562",
@@ -50,13 +50,14 @@
                 "appointmentDate": "2021-11-05",
                 "appointmentTime": "15:00",
                 "status": "pending"
-            }, {
+            },
+            {
                 "patientAssigned": "Ifunaya Esther",
                 "patientContact": "08145985632",
                 "appointmentDate": "2021-11-10",
                 "appointmentTime": "08:00",
                 "status": "pending"
-            }, 
+            },
             {
                 "patientAssigned": "Ojo Taiwo",
                 "patientContact": "08145879652",
@@ -71,7 +72,6 @@
                 "appointmentTime": "12:00",
                 "status": "pending"
             }
-           
         ],
         "city": "",
         "dateOfBirth": "",
@@ -232,7 +232,6 @@
                 "appointmentTime": "09:00",
                 "department": "gynaecology",
                 "status": "pending"
-
             },
             {
                 "doctorAssigned": "Francis Edward",
@@ -240,8 +239,7 @@
                 "appointmentDate": "2021-10-15",
                 "appointmentTime": "18:25",
                 "department": "gynaecology",
-                "status": "approved"
-
+                "status": "cancelled"
             },
             {
                 "doctorAssigned": "Chris Madufor",
@@ -250,7 +248,6 @@
                 "appointmentTime": "11:00",
                 "department": "gynaecology",
                 "status": "pending"
-
             },
             {
                 "doctorAssigned": "Zainab Agbola",
@@ -259,7 +256,6 @@
                 "appointmentTime": "12:00",
                 "department": "pediatrics",
                 "status": "pending"
-
             },
             {
                 "doctorAssigned": "Olaoluwa Damilola",
@@ -268,7 +264,6 @@
                 "appointmentTime": "02:25",
                 "department": "gynaecology",
                 "status": "completed"
-
             },
             {
                 "doctorAssigned": "Harriet Oladele",
@@ -276,8 +271,7 @@
                 "appointmentDate": "2021-11-08",
                 "appointmentTime": "08:00",
                 "department": "gynaecology",
-                "status": "approved"
-
+                "status": "cancelled"
             },
             {
                 "doctorAssigned": "Joseph Ismail",
@@ -286,7 +280,6 @@
                 "appointmentTime": "15:25",
                 "department": "pediatrics",
                 "status": "completed"
-
             },
             {
                 "doctorAssigned": "Precious Bello",
@@ -295,7 +288,6 @@
                 "appointmentTime": "11:10",
                 "department": "pediatrics",
                 "status": "completed"
-
             },
             {
                 "doctorAssigned": "Tolani Dayo",
@@ -304,7 +296,6 @@
                 "appointmentTime": "10:00",
                 "department": "gynaecology",
                 "status": "pending"
-
             }
         ],
         "city": "",
@@ -454,9 +445,4 @@
         "userName": "Oladele Levi",
         "userType": "Patient"
     }
-
-
 ]
-
-
-

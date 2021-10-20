@@ -4,7 +4,7 @@ const dummyData = [
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending',
+        status: 'Pending',
         
     },
     {
@@ -12,147 +12,147 @@ status: 'Pending',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Jumoke Ajoke',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Jimmy Kimmel',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     },
     {
         doctor: 'Tasha Conrad',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Peter Parker',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     },
     {
         doctor: 'Marvin Gaye',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     },
     {
         doctor: 'Mary Lynn',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Ada Monroe',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Tobiloba Daniels',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     },
     {
         doctor: 'Anu Morenike',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Moe Phillip',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Mark Monroe',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Grace David',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Howard Jones',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Jack Miller',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     },
     {
         doctor: 'Davidson Peter',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Billy Porter',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Russ Poe',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Ross Geller',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Completed'
+        status: 'Completed'
     },
     {
         doctor: 'Marylyn Monroe',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Pending'
+        status: 'Pending'
     },
     {
         doctor: 'Monica Smith',
         date: '12-11-2012',
         time: '2:30pm',
         contact: '08032888201',
-status: 'Cancelled'
+        status: 'Cancelled'
     }
 ]
 
@@ -175,7 +175,12 @@ function editProfile() {
         editProfileModal.style.display = 'none'
     } else editProfileModal.style.display = 'block'
 }
-
+function openAppointments() {
+    let appointment = document.getElementById ('appointment-details')
+    if (appointment.style.display === 'block') {
+        appointment.style.display = 'none'
+    } else appointment.style.display = 'block'
+}
 function signUpSuccess() {
     let signUp = document.getElementById('sign-up-successful');
     signUp.style.display = "none"
@@ -258,7 +263,14 @@ let handleBtnVisibility = (page) => {
     }
  } 
 
+ let records = JSON.parse(localStorage.getItem("userDB"))
+ let userID = localStorage.getItem('presentUser')
+ userObj = records.filter(record => record.id == userID)
+ let appointments = userObj[0].appointments
+
 function changePage(page){
+    
+    //***************************** */
     let page_span = document.getElementsByClassName("control-box")[2];
     let tableBody = document.getElementById("table-body-ad")
 
@@ -267,19 +279,54 @@ function changePage(page){
     if (page > numberOfPages()) page = numberOfPages();
 
     tableBody.innerHTML = " "
-    for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < dummyData.length; i++) {
-        let tableRow = document.createElement('tr');
-        tableRow.innerHTML = `
-        <td class="firstCol">
-        <span><img src="./img/avatarImg.png" /></span>
-        <span>${dummyData[i].doctor}</span></td>
-        <td>${dummyData[i].date}</td>
-        <td>${dummyData[i].time}</td>
-        <td>${dummyData[i].contact}</td>
-        <td>
-            <div class="tableTag ${dummyData[i].status.toLocaleLowerCase()}">${dummyData[i].status}</div>
-        </td>`
-        tableBody.append(tableRow)
+    for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < appointments.length; i++) {
+        if (userObj[0].userType == 'Patient') {
+            let cancelBtn = document.getElementById('cancel-btn')
+            let tableRow = document.createElement('tr');
+            tableRow.addEventListener('click', () => {
+                if(appointments[i].status == 'pending') openAppointments()
+                cancelBtn.addEventListener('click', () => {
+                    appointments[i].status = 'cancelled'
+                    changePage(page)
+                    openAppointments()
+                })
+            })
+            tableRow.innerHTML = `
+            <td class="firstCol">
+            <span><img src="./img/avatarImg.png" /></span>
+            <span>${appointments[i].doctorAssigned}</span></td>
+            <td>${appointments[i].appointmentDate}</td>
+            <td>${appointments[i].appointmentTime}</td>
+            <td>${appointments[i].doctorContact}</td>
+            <td>
+                <div class="tableTag ${appointments[i].status.toLocaleLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
+            </td>`
+            tableBody.append(tableRow)
+        }
+        if (userObj[0].userType == 'Doctor') {
+            let tableRow = document.createElement('tr');
+            let yesBtn = document.getElementById('yes-btn')
+            tableRow.addEventListener('click', () => {
+                if(appointments[i].status == 'pending') openAppointments()
+                yesBtn.addEventListener('click', () => {
+                    appointments[i].status = 'completed'
+                    changePage(page)
+                    openAppointments()
+                })
+            })
+            tableRow.innerHTML = `
+            <td class="firstCol">
+            <span><img src="./img/avatarImg.png" /></span>
+            <span>${appointments[i].patientAssigned}</span></td>
+            <td>${appointments[i].appointmentDate}</td>
+            <td>${appointments[i].appointmentTime}</td>
+            <td>${appointments[i].patientContact}</td>
+            <td>
+                <div class="tableTag ${appointments[i].status.toLocaleLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
+            </td>`
+            tableBody.append(tableRow)
+        }
+        
     }
     page_span.innerHTML = page
     handleBtnVisibility(page)
@@ -289,8 +336,9 @@ changePage(1)
 
 window.onclick = function(event) {
     let closeModal = document.getElementById('modal');
-    let signUp = document.getElementById
-    let editProfileModal = document.getElementById('edit-profile-modal');('sign-up-successful');
+    let signUp = document.getElementById('sign-up-successful');
+    let editProfileModal = document.getElementById('edit-profile-modal');
+    let appointment = document.getElementById('appointment-details')
     if (event.target == closeModal) {
         modal()
     }
@@ -300,26 +348,8 @@ window.onclick = function(event) {
     if (event.target == editProfileModal) {
         editProfile()
     }
+    if (event.target == appointment) {
+        openAppointments()
+    }
 }
 
-// Side Nav Stuff
-let navIcon = document.querySelector('.page-name i')
-navIcon.addEventListener('click', () => {
-    if(navIcon){}
-})
-
-function sideNavToggle() {
-    let sideNav = document.querySelector('.side-nav')
-    let sideNavText = document.querySelectorAll('.side-nav-links li span')
-    let sideNavLink = document.querySelectorAll ('.side-nav-links li')
-    let sideHeader = document.querySelector('.side-nav .header h2')
-    let main = document.querySelector('.main')
-    let topNav = document.querySelector('.top-nav')
-
-    sideNavText.forEach (item => item.style.display = 'none')
-    sideHeader.style.display = 'none'
-    sideNavLink.forEach (item => item.style.paddingRight = '40px')
-    sideNav.style.width = 'unset'
-    main.style.marginLeft = '100px'
-    topNav.style.width = 'calc(100% - 100px)'
-}

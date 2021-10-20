@@ -80,4 +80,4 @@ function showAppointmentOnPage() {
     })
     
 }
-showAppointmentOnPage()
+// showAppointmentOnPage()
