@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/appointments.css" />
     <link rel="stylesheet" href="css/doctors-dashboard.css" />
     <title>Doctors' Dashboard</title>
   </head>
@@ -80,7 +81,7 @@
           <div class="greet">
             <div class="inner">
               <img src="img/sunrise.png" alt='Sun Icon'/> 
-            <h3>Good Morning, Dr. <span class="doctor-name">Jessica<span></h3>
+            <h3>Good Morning, Dr. <span class="doctor-name"><span></h3>
           
             </div>
           <div>
@@ -147,59 +148,35 @@
               </div> 
             </div>
             <table>
-              <tr>
+              <thead>
                 <th>
-                  Patient</th>
+                  Patient Assigned</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Contact</th>
                 <th>Status</th>
-              </tr>
-              <tr>
-                <td class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                 <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                <td>
-                  
-                  <div  class="tableTag">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                <td>
-                  
-                  <div  class="tableTag">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                  <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag">Pending</div></td>
-              </tr>
-              <tr>
-                <td  class="firstCol">
-                  <span><img src="./img/avatarImg.png" /></span>
-                 <span> Geraldine Agwuike</span></td>
-                <td>18-09-2021</td>
-                <td>11:00AM</td>
-                <td>07068392790</td>
-                 <td>
-                  
-                  <div  class="tableTag">Pending</div></td>
-              </tr>
+              </thead>
+              <tbody id="table-body-ad">
+              
+              </tbody>
             </table>
+            <div class="tableControls">
+              <div class="control-box">
+                <p style="font-weight: 700;"><<</p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: bold;"><</p>
+              </div>
+              <div class="control-box">
+               <p>1</p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: 700;">></p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: 700;">>></p>
+              </div>
+            </div>
             <button class="afterTable">View all</button>
           </div>
     </div>
@@ -212,6 +189,15 @@
         <div class="button-wrap">
           <button class="warning" onclick="signOut();">Yes</button>
           <button class="blue" onclick="modal();">No</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="appointment-details">
+      <div class="log-out-wrap">
+        <p>Has this appointment been completed?</p>
+        <div class="button-wrap">
+          <button id="yes-btn" class="blue">Yes</button>
+          <button class="warning" onclick="openAppointments();">No</button>
         </div>
       </div>
     </div>

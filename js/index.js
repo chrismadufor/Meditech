@@ -220,6 +220,11 @@ window.onclick = function(event) {
     }
 }
 
+let records = JSON.parse(localStorage.getItem("userDB"))
+ let userID = localStorage.getItem('presentUser')
+ userObj = records.filter(record => record.id == userID)
+ let appointments = userObj[0].appointments
+
 let current_page = 1;
 let records_per_page = 7;
 let btn_next = document.getElementsByClassName("control-box")[3];
@@ -282,11 +287,6 @@ let handleBtnVisibility = (page) => {
         btn_next_double.style.visibility = "visible";
     }
  } 
-
- let records = JSON.parse(localStorage.getItem("userDB"))
- let userID = localStorage.getItem('presentUser')
- userObj = records.filter(record => record.id == userID)
- let appointments = userObj[0].appointments
 
 function changePage(page){
     

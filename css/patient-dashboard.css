@@ -164,3 +164,10 @@ td img {
   border-radius: 4px;
   width: 8%;
 }
+
+.tableControls, .control-box {
+  display: none;
+}
+.elipses {
+  width: unset;
+}

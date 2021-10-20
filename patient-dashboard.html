@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/appointments.css" />
     <link rel="stylesheet" href="css/patient-dashboard.css" />
 
     <title>Patient Dashboard</title>
@@ -118,59 +119,51 @@
           </div>
           
 
-         <div class="appointmentDashboard">
-          <div class="all-app">
-            <p>Recent Appointments</p>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <table>
-            <thead>
-              <tr class="table-row">
-                <th></th>
-                <th>Doctors Assigned</th>
+          <div class="tableComponent">
+            <div class="tableTopRow">
+              <div>
+                <select class="theDate" name="theDate">
+                  <option value="">Pending</option>
+                  <!-- <option value="ca">Canada</option>
+                  <option value="usa">USA</option> -->
+                  </select>
+              </div>
+              <div>
+                <img src="./img/Elipses (3).png" class="elipses"/>
+              </div> 
+            </div>
+            <table>
+              <thead>
+                <th>
+                  Doctor Assigned</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Contact</th>
-                <th><p>Status</p></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-row">
-                <td><img src="img/patient.jpg" alt="" /></td>
-                <td>Dr. James Adeyemo</td>
-                <td>25-08-21</td>
-                <td>10:00am</td>
-                <td>0709943765</td>
-                <td><button class="completed">Completed</button></td>
-              </tr>
-              <tr class="table-row">
-                <td><img src="img/profile-picture.jpg" alt="" /></td>
-                <td>Dr. Peter Kadir</td>
-                <td>25-08-21</td>
-                <td>2:00am</td>
-                <td>08145457523</td>
-                <td><button class="completed">Completed</button></td>
-              </tr>
-              <tr class="table-row">
-                <td><img src="img/patient.jpg" alt="" /></td>
-                <td>Dr. James Ruth</td>
-                <td>25-08-21</td>
-                <td>9:00am</td>
-                <td>0709943765</td>
-                <td><button class="cancelled"> Cancelled</button></td>
-              </tr>
-              <tr class="table-row">
-                <td><img src="img/profile-picture.jpg" alt="" /></td>
-                <td>Dr. Emmanuel Faruk</td>
-                <td>25-08-21</td>
-                <td>11:00am</td>
-                <td>08145457523</td>
-                <td ><button class="completed">Completed</button></td>
-              </tr>
-            </tbody>
-          </table>
-          <button class="view-all">View All</button>
-        </div>
+                <th>Status</th>
+              </thead>
+              <tbody id="table-body-ad">
+              
+              </tbody>
+            </table>
+            <div class="tableControls">
+              <div class="control-box">
+                <p style="font-weight: 700;"><<</p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: bold;"><</p>
+              </div>
+              <div class="control-box">
+               <p>1</p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: 700;">></p>
+              </div>
+              <div class="control-box">
+                <p style="font-weight: 700;">>></p>
+              </div>
+            </div>
+            <button class="afterTable">View all</button>
+          </div>
 
         </div>
         </div>
@@ -178,13 +171,22 @@
     </div>
     <div class="modal" id="modal">
       <div class="log-out-wrap">
-          <p>Are you sure you want to log out?</p>
-          <div class="button-wrap">
-              <button class="warning" onclick="signOut();">Yes</button>
-              <button class="blue" onclick="modal();">No</button>
-          </div>
+        <p>Are you sure you want to log out?</p>
+        <div class="button-wrap">
+            <button class="warning" onclick="signOut();">Yes</button>
+            <button class="blue" onclick="modal();">No</button>
+        </div>
       </div>
-  </div>
+    </div>
+    <div class="modal" id="appointment-details">
+      <div class="log-out-wrap">
+        <p>Do you want to cancel this appointment?</p>
+        <div class="button-wrap">
+          <button id="cancel-btn" class="blue">Yes</button>
+          <button class="warning" onclick="openAppointments();">No</button>
+        </div>
+      </div>
+    </div>
   <script src="js/index.js"></script>
     <script src="js/patient-dashboard.js"></script>
     <script src="/js/topnav.js"></script>
