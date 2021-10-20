@@ -51,7 +51,7 @@
           </li>
         </ul>
       </div>
-      <main class="main">
+      <div class="main">
         <div class="top-nav">
           <div class="page-name">
             <i class="fas fa-bars"></i>
@@ -84,7 +84,7 @@
                 <option value="completed">Completed</option>
                 </select>
           </div>
-            <div class="tableComponent">
+          <div class="tableComponent">
             <table>
               <thead>
                 <th>Doctor Assigned</th>
@@ -115,7 +115,6 @@
               </div>
             </div>
           </div>
-    </div>
         </div>
       </div>
     </div>
@@ -125,6 +124,15 @@
         <div class="button-wrap">
           <button class="warning" onclick="signOut();">Yes</button>
           <button class="blue" onclick="modal();">No</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="appointment-details">
+      <div class="log-out-wrap">
+        <p>Has this appointment been completed?</p>
+        <div class="button-wrap">
+          <button id="yes-btn" class="blue">Yes</button>
+          <button class="warning" onclick="openAppointments();">No</button>
         </div>
       </div>
     </div>
