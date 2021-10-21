@@ -20,7 +20,7 @@ function getTopNavPic() {
 
   // Side Nav Stuff
 let navIcon = document.querySelector('.page-name i')
-console.log("navIcon is " + navIcon)
+// console.log("navIcon is " + navIcon)
 navIcon.addEventListener('click', () => {
   console.log("There has been a click!")
   if(!navIcon.classList.contains('show')) {
