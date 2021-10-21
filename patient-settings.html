@@ -12,6 +12,8 @@
     />
   <link rel="stylesheet" href="css/dashboard-template.css">
   <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/dashboard-template.css" />
+    <link rel="stylesheet" href="css/patient-profile.css" />
   <title>Patient Settings</title>
 </head>
 <body>
@@ -100,7 +102,7 @@
             </tr>
             <tr class="table-settings">
               <td><i class="fas fa-key "></i></td>
-              <td><p><a href="#">Change Password</a</p></td>
+              <td ><p><a onclick="changePassword()"">Change Password</a</p></td>
             </tr>
             
            
@@ -109,7 +111,55 @@
         </table>
         
       </div>
+     
     </div>
+
+    
+  </div>
+  <div class="modal" id="change-password-modal">
+    <form class="edit-profile-container">
+      <div class="form-title">
+        <h2>Change Password</h2>
+        <h2 class="close-modal" onclick="changePassword();">x</h2>
+      </div>
+      
+      <div class="input-wrap">
+        <div class="form-input">
+          <label for="patient-name">Formal Password</label>
+          <input
+            type="password"
+            id="patient-name"
+            placeholder="Formal Password"
+          />
+        </div>
+        <div class="form-input">
+          <label for="patient-email">New Password</label>
+          <input
+            type="text"
+            id="patient-email"
+            placeholder="New Password"
+          />
+        </div>
+        <div class="form-input">
+          <label for="patient-id">Confirm Password
+          </label>
+          <input
+            type="text"
+            id="patient-email"
+            placeholder="Confirm Password"
+          />
+        </div>
+        
+      </div>
+      <input
+        type="button"
+        value="CHANGE PASSWORD"
+        class="submit-form"
+        id="submit-form"
+        onclick="changePassword();"
+      />
+    </form>
+
     <div class="modal" id="modal">
       <div class="log-out-wrap">
           <p>Are you sure you want to log out?</p>
@@ -123,5 +173,10 @@
 
   <script src="js/index.js"></script>
   <script src="js/topnav.js"></script>
+
+
+  <script src="js/patient-setting.js"></script>
+    
+
 </body>
 </html>
