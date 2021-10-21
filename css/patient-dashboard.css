@@ -10,8 +10,8 @@
 
 .patient-info{
   display: flex;
-  border: 1px  ;
-  margin-left: 20px;
+  justify-content: space-between;
+  /* margin-left: 20px; */
 }
 .patient{
   margin-right: 50px ;
@@ -40,6 +40,11 @@ height: auto;
 .tableTopRow select{
   height: 30px;
   width: 90px;
+}
+
+.tableComponent {
+  margin: 50px 0;
+  background-color: white;
 }
 
 .patient img{
@@ -158,6 +163,20 @@ td img {
   margin-left: 10px;
 }
 
+table thead th {
+  padding-left: 50px;
+}
+
+table th:first-child {
+  border-radius: 5px 0 0 0 ;
+  padding-left: 0;
+}
+
+table th:last-child {
+  border-radius:0 5px 0 0 ;
+  padding-left: 0;
+}
+
 .cancelled{
   padding: 5px;
   color: white;
@@ -185,20 +204,18 @@ td img {
 }
 
 button.afterTable{
-  margin-left: 50px;
   background-color: #00A8DB;
   color: #fff;
   padding: 7px;
-  width: 86px;
-  height: 34px;
+  width: 100px;
+  height: 35px;
   border: none;
   outline: none;
   border-radius: 5px;
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin: 20px 0 20px 50px;
 }
 
-.tableControls, .control-box {
+.tableControls, .control-box, .tableTopRow {
   display: none;
 }
 .elipses {

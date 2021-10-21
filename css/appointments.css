@@ -78,13 +78,18 @@
     height: 50px;
     
   }
+  table thead th {
+    /* padding-left: 50px; */
+  }
 
   table th:first-child {
     border-radius: 5px 0 0 0 ;
+    padding-left: 0;
   }
 
   table th:last-child {
     border-radius:0 5px 0 0 ;
+    padding-left: 0;
   }
 
   div.tableTag{
@@ -110,11 +115,7 @@
 
   table tr td{
     border-bottom: 1px solid #CCCCCC;
-  }
-
-  table tr td{
-      padding-left: 50px;
-      align-items: center;
+    padding-left: 50px;
   }
  
   table .firstCol{

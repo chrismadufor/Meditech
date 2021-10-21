@@ -64,12 +64,12 @@ img {
 .side-nav-links li {
   color: white;
   padding-left: 20px;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  margin: 10px 0;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 15px 0 0 15px;
   cursor: pointer;
   /* width: 200px; */
@@ -91,6 +91,12 @@ img {
   background-color: white;
   color: #00a8db;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+.side-nav-links li.active:hover {
+  transform: none;
+}
+.side-nav-links li:hover {
+  transform: scale(1.05);
 }
 .log-out {
   position: absolute;
