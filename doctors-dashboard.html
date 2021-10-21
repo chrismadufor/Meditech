@@ -32,11 +32,6 @@
             >
           </li>
           <li>
-            <a href="/health-tips.html"
-              ><i class="fas fa-heartbeat"></i><span>Health Tips</span></a
-            >
-          </li>
-          <li>
             <a href="/doctors-notifications.html"
               ><i class="fas fa-bell"></i><span>Notifications</span></a
             >
@@ -137,10 +132,11 @@
           <div class="tableComponent">
             <div class="tableTopRow">
               <div>
-                <select class="theDate" name="theDate">
-                  <option value="">Pending</option>
-                  <!-- <option value="ca">Canada</option>
-                  <option value="usa">USA</option> -->
+                <select name="label"  class="filterOption">
+                  <option value="all">All</option>
+                  <option value="pending">Pending</option>
+                  <option value="cancelled">Cancelled</option>
+                  <option value="completed">Completed</option>
                   </select>
               </div>
               <div>

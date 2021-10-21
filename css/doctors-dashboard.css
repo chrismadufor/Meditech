@@ -66,36 +66,29 @@ div.cards{
   .cardBody h1{
       padding-top: 20px;
   }
-  /* div.tableTag{
-    background-color: #FF7A00;
-    border-radius: 6px;
-    color:#fff;
-    text-align: center;
-    font-weight: bold;
-    align-self: center;
-    padding-top: 7px;
-    width: 120px;
-    height: 35px;
-  } */
+
   .card img {
     max-width: 15%;
     margin-right: 20px;
   }
   
-  .tableControls, .control-box {
+  .tableControls, .control-box, .tableTopRow {
     display: none;
   }
 
   button.afterTable{
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
     background-color: #00A8DB;
     color: #fff;
     padding: 7px;
-    width: 86px;
-    height: 34px;
+    width: 100px;
+    height: 35px;
     border: none;
     outline: none;
     border-radius: 5px;
+    margin: 20px 0 20px 50px;
+  }
+
+  .tableComponent {
+    margin: 50px 0;
+    background-color: white;
   }
