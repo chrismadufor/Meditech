@@ -232,6 +232,21 @@ let btn_next_double = document.getElementsByClassName("control-box")[4];
 let btn_prev = document.getElementsByClassName("control-box")[1];
 let btn_prev_double = document.getElementsByClassName("control-box")[0];
 
+const selectElement = document.querySelector('.filterOption');
+
+selectElement.addEventListener('change', (event) => {
+  let val = event.target.value;
+  if(val != 'all'){
+    let filterValue = appointments.filter(el => el.status == val);
+    changePage(1, filterValue)
+  } else {
+    let records = JSON.parse(localStorage.getItem("userDB"))
+    let userID = localStorage.getItem('presentUser')
+    userObj = records.filter(record => record.id == userID)
+    let appointments = userObj[0].appointments
+    changePage(1, appointments)
+  }
+});
 
 let numberOfPages = () =>  Math.ceil(dummyData.length / records_per_page);
 
@@ -288,7 +303,7 @@ let handleBtnVisibility = (page) => {
     }
  } 
 
-function changePage(page){
+function changePage(page, rows = appointments){
     
     let page_span = document.getElementsByClassName("control-box")[2];
     let tableBody = document.getElementById("table-body-ad")
@@ -298,28 +313,27 @@ function changePage(page){
     if (page > numberOfPages()) page = numberOfPages();
 
     tableBody.innerHTML = " "
-    for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < appointments.length; i++) {
+    for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < rows.length; i++) {
         if (userObj[0].userType == 'Patient') {
             let cancelBtn = document.getElementById('cancel-btn')
             let tableRow = document.createElement('tr');
             tableRow.addEventListener('click', () => {
-                if(appointments[i].status == 'pending') openAppointments()
+                if(rows[i].status == 'pending') openAppointments()
                 cancelBtn.addEventListener('click', () => {
-                    appointments[i].status = 'cancelled'
+                    rows[i].status = 'cancelled'
                     changePage(page)
                     openAppointments()
                 })
             })
-            console.log(appointments)
             tableRow.innerHTML = `
             <td class="firstCol">
             <span><img src="./img/avatarImg.png" /></span>
-            <span>${appointments[i].doctorAssigned}</span></td>
-            <td>${appointments[i].appointmentDate}</td>
-            <td>${appointments[i].appointmentTime}</td>
-            <td>${appointments[i].doctorContact}</td>
+            <span>${rows[i].doctorAssigned}</span></td>
+            <td>${rows[i].appointmentDate}</td>
+            <td>${rows[i].appointmentTime}</td>
+            <td>${rows[i].doctorContact}</td>
             <td>
-                <div class="tableTag ${appointments[i].status.toLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
+                <div class="tableTag ${rows[i].status.toLowerCase()}">${rows[i].status.charAt(0).toUpperCase() + rows[i].status.slice(1)}</div>
             </td>`
             tableBody.append(tableRow)
         }
@@ -327,9 +341,9 @@ function changePage(page){
             let tableRow = document.createElement('tr');
             let yesBtn = document.getElementById('yes-btn')
             tableRow.addEventListener('click', () => {
-                if(appointments[i].status == 'pending') openAppointments()
+                if(rows[i].status == 'pending') openAppointments()
                 yesBtn.addEventListener('click', () => {
-                    appointments[i].status = 'completed'
+                    rows[i].status = 'completed'
                     changePage(page)
                     openAppointments()
                 })
@@ -337,12 +351,12 @@ function changePage(page){
             tableRow.innerHTML = `
             <td class="firstCol">
             <span><img src="./img/avatarImg.png" /></span>
-            <span>${appointments[i].patientAssigned}</span></td>
-            <td>${appointments[i].appointmentDate}</td>
-            <td>${appointments[i].appointmentTime}</td>
-            <td>${appointments[i].patientContact}</td>
+            <span>${rows[i].patientAssigned}</span></td>
+            <td>${rows[i].appointmentDate}</td>
+            <td>${rows[i].appointmentTime}</td>
+            <td>${rows[i].patientContact}</td>
             <td>
-                <div class="tableTag ${appointments[i].status.toLocaleLowerCase()}">${appointments[i].status.charAt(0).toUpperCase() + appointments[i].status.slice(1)}</div>
+                <div class="tableTag ${rows[i].status.toLocaleLowerCase()}">${rows[i].status.charAt(0).toUpperCase() + rows[i].status.slice(1)}</div>
             </td>`
             tableBody.append(tableRow)
         }
